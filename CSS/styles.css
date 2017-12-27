@@ -156,18 +156,17 @@ footer{
 }
 
 .carousel-wrapper{
-	width: 90%;
-	max-width: 60em;
+	max-width: 90%;
 	margin: 0 auto;
-	padding-bottom: 5em;
-	perspective: 100em;
+	/*padding-bottom: 12em;*/
+	perspective: 180em;
 	text-align: center;
 }
 
 .carousel {
 	position: relative;
-	width: 25em;
-	height: 25em;
+	width: 65em;
+	height: 50em;
 	margin: 0 auto;
 	transform-style: preserve-3d;
 	transition: transform 0.5s ease;
@@ -175,10 +174,11 @@ footer{
 
 .carousel-slide{
 	position: absolute;
-	display: table;
-	width: 25em;
-	height: 15em;
+	/*display: table;*/
+	width: 65em;
+	height: auto;
 	background: white;
+	margin: 0 auto;
 }
 
 [slide-number="1"] { 
@@ -198,21 +198,21 @@ footer{
 }
 
 .carousel-slide:nth-child(3) {
-  	transform: translateZ(-7.5em) rotateY(180deg);
+  	transform: translateZ(-22.5em) rotateY(180deg);
 }
 
 .carousel-slide:nth-child(2) {
-  	transform: rotateY(-270deg) translateX(12.5em);
+  	transform: rotateY(-270deg) translateX(32.5em);
   	transform-origin: top right;
 }
 
 .carousel-slide:nth-child(4) {
-  	transform: rotateY(270deg) translateX(-11.5em);
+  	transform: rotateY(270deg) translateX(-32.5em);
   	transform-origin: center left;
 }
 
 .carousel-slide:nth-child(1) {
-  	transform: translateZ(9.5em);
+  	transform: translateZ(22.5em);
 }
 
 .next, .prev {
@@ -221,7 +221,7 @@ footer{
   right: 0;
   width: 7em;
   margin-top: -2.5em;
-  border-radius: 3px;
+  border-radius: 5px;
   background: lightgreen;
   text-align: center;
   line-height: 3;
@@ -233,4 +233,6 @@ footer{
 .prev {
   left: 0;
 }
-
+ /*.certs{
+ 	width: 60em;
+ }*/
