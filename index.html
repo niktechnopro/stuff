@@ -162,8 +162,10 @@
 		</div>
 	</section>
 	<!-- Contact Area -->
-	<section>
+	<section id="contact" class="mapWrap">
+	<div id="googleMap"></div>
 	<div class="contact-wrapper">
+		<h2 class="portfolio-title">Contact Me!</h2>
 		<div class="row">
 			<div class="left-side col-sm-6 text-center social">
 				<div id="social">
@@ -214,6 +216,9 @@
 	<!-- Footer end -->
 </body>
 <script src="./JS/carousel.js"></script>
+<script src="./JS/googleMap.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3lePloLKVu1xjO-wCQyVYm3xMx4tP_Eg&callback=myMap"></script>
+
 <script>
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 500, hide: 100}});   
