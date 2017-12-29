@@ -1,7 +1,6 @@
 /*body{
 	background-color: green;
 }*/
-$primary-color: hsl(100, 100, 70);
 
 #topnav{
 	list-style: none;
@@ -152,11 +151,12 @@ footer{
 
 .logo:hover {
 	/*width: 90px;*/
-	box-shadow: 0 10px 35px rgba(50,105,206,0.8);
+	box-shadow: 0 1em 3em rgba(50,105,206,0.8);
 }
 
 .carousel-wrapper{
-	max-width: 90%;
+	display: none;
+	max-width: 80%;
 	margin: 0 auto;
 	/*padding-bottom: 12em;*/
 	perspective: 180em;
@@ -169,7 +169,7 @@ footer{
 	height: 50em;
 	margin: 0 auto;
 	transform-style: preserve-3d;
-	transition: transform 0.5s ease;
+	transition: transform 0.4s ease;
 }
 
 .carousel-slide{
@@ -219,9 +219,9 @@ footer{
   position: absolute;
   top: 50%;
   right: 0;
-  width: 7em;
+  width: 5em;
   margin-top: -2.5em;
-  border-radius: 5px;
+  border-radius: 50%;
   background: lightgreen;
   text-align: center;
   line-height: 3;
@@ -233,6 +233,126 @@ footer{
 .prev {
   left: 0;
 }
- /*.certs{
- 	width: 60em;
- }*/
+ 
+.portfolio-title{
+	font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.portfolio-title::before,.portfolio-title::after {
+    content: "";
+    background: #ccc;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 42%;
+    vertical-align: middle;
+}
+.portfolio-title::before {
+    right: 0.5em;
+    margin-left: -42%;
+}
+.portfolio-title::after {
+    left: 0.5em;
+    margin-right: -42%;
+}
+
+.item-space {
+    margin-bottom: 30px;
+}
+
+#portfolio{
+	padding: 80px 0px 0px 0px;
+}
+
+.port{
+	list-style: none;
+	text-align: left;
+	padding-bottom: 40px;
+}
+
+.port figure {
+	margin: 0;
+	position: relative;
+}
+
+.port figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.port figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #111;
+	color: #e66f69;
+}
+
+.port figcaption h3 {
+	margin: 0px 0px 8px 0px;
+	padding: 0;
+	color: #fff;
+}
+
+.port figcaption a {
+	text-align: center;
+	padding: 8px 15px;
+	display: inline-block;
+	color: #fff;
+}
+
+.cs-style-3 figure {
+	overflow: hidden;
+}
+
+.cs-style-3 figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.cs-style-3 figcaption a {
+	position: absolute;
+	bottom: 31px;
+	right: 20px;
+}
+.button{
+	background: transparent;
+	border: 1px solid #fff;
+}
+.button:hover {
+    background: white;
+    color: #000;
+}
+
+.cs-style-3 figcaption {
+	height: 100px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.cs-style-3 figure:hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
