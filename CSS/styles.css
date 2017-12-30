@@ -185,6 +185,12 @@ footer{
 
 #my-picture{
 	border-radius: 50%;
+    /*this will automatically rescale my image depending on viewport*/
+    width:auto;
+    height:auto;
+    max-width:98%;
+    max-height:95%;
+    margin-bottom: 5%;
 }
 
 .logo:hover {
@@ -246,7 +252,7 @@ footer{
 }
 
 .carousel-slide:nth-child(4) {
-  	transform: rotateY(270deg) translateX(-10.6em);
+  	transform: rotateY(270deg) translateX(-10.7em);
   	transform-origin: center left;
 }
 
@@ -272,6 +278,7 @@ footer{
   color: black;
   transform: translateY(-65%);
   cursor: pointer;
+  margin: 3em;
 }
 
 .prev {
