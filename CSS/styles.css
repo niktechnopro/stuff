@@ -195,17 +195,17 @@ footer{
 
 /*carousel portion*/
 .carousel-wrapper{
-	display: none;
-	max-width: 80%;
+	/*display: none;*/
+	max-width: 70%;
 	margin: 0 auto;
 	/*padding-bottom: 12em;*/
-	perspective: 180em;
+	perspective:270em;
 	text-align: center;
 }
 
 .carousel {
 	position: relative;
-	width: 65em;
+	width: 22em;
 	height: 50em;
 	margin: 0 auto;
 	transform-style: preserve-3d;
@@ -215,7 +215,7 @@ footer{
 .carousel-slide{
 	position: absolute;
 	/*display: table;*/
-	width: 65em;
+	width: 22em;
 	height: auto;
 	background: white;
 	margin: 0 auto;
@@ -238,21 +238,26 @@ footer{
 }
 
 .carousel-slide:nth-child(3) {
-  	transform: translateZ(-22.5em) rotateY(180deg);
+  	transform: translateZ(-10.5em) rotateY(180deg);
 }
 
 .carousel-slide:nth-child(2) {
-  	transform: rotateY(-270deg) translateX(32.5em);
+  	transform: rotateY(-270deg) translateX(11em);
   	transform-origin: top right;
 }
 
 .carousel-slide:nth-child(4) {
-  	transform: rotateY(270deg) translateX(-32.5em);
+  	transform: rotateY(270deg) translateX(-10.8em);
   	transform-origin: center left;
 }
 
 .carousel-slide:nth-child(1) {
-  	transform: translateZ(22.5em);
+  	transform: translateZ(11em);
+}
+
+.certs{
+	width:300px;
+	height: 291px;
 }
 
 .next, .prev {
@@ -262,7 +267,7 @@ footer{
   width: 5em;
   margin-top: -2.5em;
   border-radius: 50%;
-  background: lightgreen;
+  background: lightblue;
   text-align: center;
   line-height: 3;
   color: black;
@@ -274,12 +279,13 @@ footer{
   left: 0;
 }
  
+/*portfolio portion*/
 .portfolio-title{
 	font-size: 4em;
     font-weight: 300;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 70px;
+    margin-bottom: 0.5em;
 }
 
 .portfolio-title::before,.portfolio-title::after {
@@ -396,4 +402,9 @@ footer{
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
 	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
 	transition: transform 0.4s, opacity 0.1s;
+}
+
+
+.interests{
+	margin-top: 10em;
 }
