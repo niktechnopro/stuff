@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
 	<title>My Personal Portfolio Page</title>
+	<meta charset="UTF-8">
+	
+	<!-- meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./CSS/styles.css" />
@@ -11,23 +16,31 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<ul id="topnav">
-		<li class="dropdown">
-			<a class="drop" chref="#">Contact Me</a>
-			<div class="hover">
-				<p>item</p>
+	<!-- navbar -->
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<p class="navbar-brand">niktechnopro</p>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        		<span class="icon-bar"><i class="pe-7s-home"></i></span>
+        		<span class="icon-bar"></span>
+       			<span class="icon-bar"></span> 
+       			<span class="icon-bar"></span>
+       			<span class="icon-bar"></span>
+      		</button>
 			</div>
-		</li>
-		<li>
-				<a href="#">Interests</a>
-		</li>
-		<li>
-				<a href="#">My Projects</a>
-		</li>
-		<li>
-				<a href="#">About Me</a>
-		</li>
-	</ul>
+			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="#">About Me</a></li>
+				<li><a href="#">What I know</a></li>
+				<li><a href="#">My Works</a></li>
+				<li><a href="#">Contact Me</a></li>
+				<li><a href="#">My Resume</a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
 	
 	<!-- about me area -->
 	<section id="about-me">
@@ -40,8 +53,47 @@
 				<img id="my-picture" src="./images/myself.jpg" alt="my picture" />
 			</div>
 			<div class="col-xs-12 col-sm-6 right-me text-center">
-				<p class="black alert alert-info">What I know</p>
-				<div class="col-sm-12">
+				<p class="black alert alert-info">About Me</p>
+				<!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
+				<p class="me"><i>Originally trained as an electronics technician and after spending some time working in the consumer electronics industry I have naturally developped interest in computers. After CompTia training that provided me with PC and OS fundamentals, transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
+				<!-- </div>				 -->
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section id="what I know">
+	<div class="container">
+		<h2 class="portfolio-title">What I know</h2>
+		<div class="row">
+			<div class="carousel-wrapper col-xs-12 col-sm-6">
+				<div class="carousel" slide-number="1">
+					<!-- first slide -->
+					<div class="carousel-slide">
+						<!-- <h2>slide 1</h2> -->
+						<img class="certs" src="./images/certs/CSIS.png" alt="CSIS logo" />
+						<!-- <object data="./certs/CSIS.pdf"></object> -->
+					</div>
+					<!-- second slide -->
+					<div class="carousel-slide">
+						<!-- <h2>slide 2</h2> -->
+						<img class="certs" src="./images/certs/CCNASEC.png" alt="CCNA Security logo" />
+					</div>
+					<!-- third slide -->
+					<div class="carousel-slide">
+						<!-- <h2>slide 3</h2> -->
+						<img class="certs" src="./images/certs/JNCIA.png" alt="Juniper JNCIA logo" />
+					</div>
+					<!-- forth slide -->
+					<div class="carousel-slide">
+						<!-- <h2>slide 4</h2> -->
+						<img class="certs" id="ccnas" src="./images/certs/CCNA.png" alt="CCNA R&S logo" />
+					</div>
+				</div>
+				<div class="next">></div>
+	  			<div class="prev"><</div>
+			</div><!--end of carousel wrapper-->
+			<div class="col-xs-12 col-sm-6">
 					<span class="col-xs-4 col-sm-3 logos" data-toggle="tooltip" data-placement="top" title="HTML5">
 						<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img class="logo" src="./logos/html5-logo.png" alt="html5 logo" /></a>
 					</span>
@@ -88,9 +140,8 @@
 						<a href="https://getbootstrap.com/docs/3.3/"><img class="logo" src="./logos/bootstrap-logo.png" alt="bootstrap-logo" /></a>
 					</span>
 				</div>
-			</div>
 		</div>
-		</div>
+	</div>
 	</section>
 
 	<!-- my portfolio area -->
@@ -134,45 +185,8 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- about me area end -->
-	<section id="interests">
-	<div class="container">
-		<h2 class="portfolio-title">My Interests</h2>
-		<div class="row">
-			<div class="carousel-wrapper col-xs-12 col-sm-6">
-				<div class="carousel" slide-number="1">
-					<!-- first slide -->
-					<div class="carousel-slide">
-						<!-- <h2>slide 1</h2> -->
-						<img class="certs" src="./images/certs/CSIS.png" alt="CSIS logo" />
-						<!-- <object data="./certs/CSIS.pdf"></object> -->
-					</div>
-					<!-- second slide -->
-					<div class="carousel-slide">
-						<!-- <h2>slide 2</h2> -->
-						<img class="certs" src="./images/certs/CCNASEC.png" alt="CCNA Security logo" />
-					</div>
-					<!-- third slide -->
-					<div class="carousel-slide">
-						<!-- <h2>slide 3</h2> -->
-						<img class="certs" src="./images/certs/JNCIA.png" alt="Juniper JNCIA logo" />
-					</div>
-					<!-- forth slide -->
-					<div class="carousel-slide">
-						<!-- <h2>slide 4</h2> -->
-						<img class="certs" id="ccnas" src="./images/certs/CCNA.png" alt="CCNA R&S logo" />
-					</div>
-				</div>
-				<div class="next">></div>
-	  			<div class="prev"><</div>
-			</div><!--end of carousel wrapper-->
-			<div class="col-xs-12 col-sm-6 left-me text-center">
-				<p id="me"><i>Originally trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developped interest in computers. Started with CompTia training to gain PC and OS fundamentals, and then progressed to Networking side with Cisco and Juniper training. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. And here I am...</i></p>
-			</div>
-		</div>
-	</div>
-	</section>
+	<!-- end of my works -->
+	
 	<!-- Contact Area -->
 	<section id="contact" class="mapWrap">
 	<div id="googleMap"></div>

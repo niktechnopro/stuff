@@ -426,7 +426,7 @@ footer{
 	margin-top: 10em;
 }
 
-#me{
+.me{
 	color: black;
 	font-size: 2em;
 	text-align: left;
@@ -435,7 +435,8 @@ footer{
 
 #my-title{
 	font-style: italic;
-	margin-top: 1em;
+	/*margin-top: 1em;*/
+	line-height: 147%;
 	text-align: center;
 	color: black;
 	font-size: 2em;
