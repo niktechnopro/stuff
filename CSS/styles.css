@@ -206,6 +206,7 @@ footer{
 	margin: 0 auto;
 	perspective:270em;
 	text-align: center;
+	margin-top: 8em;
 }
 
 .carousel {
@@ -243,21 +244,29 @@ footer{
 }
 
 .carousel-slide:nth-child(3) {
-  	transform: translateZ(-10.5em) rotateY(180deg);
+  	-webkit-transform: translateZ(-10.5em) rotateY(180deg);
+  	-moz-transform: translateZ(-10.5em) rotateY(180deg);
+  	-ms-transform: translateZ(-10.5em) rotateY(180deg);
 }
 
 .carousel-slide:nth-child(2) {
-  	transform: rotateY(-270deg) translateX(10.8em);
+  	-webkit-transform: rotateY(-270deg) translateX(10.8em);
+  	-moz-transform: rotateY(-270deg) translateX(10.8em);
+  	-ms-transform: rotateY(-270deg) translateX(10.8em);
   	transform-origin: top right;
 }
 
 .carousel-slide:nth-child(4) {
-  	transform: rotateY(270deg) translateX(-10.7em);
+  	-webkit-transform: rotateY(270deg) translateX(-10.7em);
+  	-moz-transform: rotateY(-270deg) translateX(-10.7em);
+  	-ms-transform: rotateY(-270deg) translateX(-10.7em);
   	transform-origin: center left;
 }
 
 .carousel-slide:nth-child(1) {
-  	transform: translateZ(11em);
+	-webkit-transform: translateZ(11em);
+	-moz-transform: translateZ(11em);
+	-ms-transform: translatez(11em);
 }
 
 .certs{
@@ -414,4 +423,19 @@ footer{
 
 .interests{
 	margin-top: 10em;
+}
+
+#me{
+	color: black;
+	font-size: 2em;
+	text-align: left;
+}
+
+#indicator{
+	list-style-type: circle;
+	text-align: center;
+}
+
+#indicator li{
+	padding-right: 25px;
 }
