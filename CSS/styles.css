@@ -3,9 +3,6 @@
 }*/
 
 /* contact form*/
-#contact {
-    color: #fff;
-}
 
 .mapWrap {
     position: relative;
@@ -481,6 +478,7 @@ footer{
 }
 
 #contact{
+	color: #fff;
 	margin-top:-0.1em;
 	min-height: 100%;
 }
@@ -516,5 +514,6 @@ html, body{
 	}
 	.contact-wrapper, #contact{
 		margin-top: -0.2em;
+		padding-top: -0.1em;
 	}
 }
