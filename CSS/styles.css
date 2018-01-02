@@ -444,11 +444,61 @@ footer{
 	font-family: Lobster;
 }
 
-#indicator{
-	list-style-type: circle;
-	text-align: center;
+/*navbar styling*/
+.navbar-inverse .navbar-nav>li>a{
+	color:#ccc;
+	font-size: 1.5em;
+	font-family: Lobster;
+	padding-top: 25px;
+	padding-bottom:17px;
+	transition: color 0.5s;
 }
 
-#indicator li{
-	padding-right: 25px;
+.navbar-inverse .navbar-brand{
+	color:#ccc;
+	font-size: 1.4em;
+	font-family: Lobster;
+	padding-top: 25px;
 }
+
+.nav li:hover {
+	background-color: white;
+	
+}
+
+.nav li:hover a{
+	color: black !important;
+}
+
+/*for smooth slide*/
+.slideanim {visibility:hidden;}
+.slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+/*@media (max-width: 800px){
+	
+}*/
