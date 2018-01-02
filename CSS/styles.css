@@ -27,6 +27,7 @@
     position: relative;
     z-index: 1;
     min-height: 100%;
+    margin-top: -0.2em;
 }
 
 .normal-txt {
@@ -480,6 +481,7 @@ footer{
 }
 
 #contact{
+	margin-top:-0.1em;
 	min-height: 100%;
 }
 
@@ -511,5 +513,8 @@ html, body{
 	.know{
 		margin-top: 0;
 		margin-bottom: 0.3em;
+	}
+	.contact-wrapper, #contact{
+		margin-top: -0.2em;
 	}
 }
