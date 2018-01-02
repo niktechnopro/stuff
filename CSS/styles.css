@@ -164,8 +164,10 @@
 
 /*footer portion*/
 footer{
+	height: 2em;
 	width: 100%;
 	background-color: #fff;
+	position: relative;
 }
 
 #copyright a{
@@ -504,6 +506,14 @@ footer{
 #about-me{
 	margin-top: 63px;
   }
+
+#portfolio{
+	min-height: 100%;
+}
+
+html, body{
+	height: 100%;
+}
 /*@media (max-width: 800px){
 	
 }*/
