@@ -175,8 +175,12 @@ footer{
 	width: 22em;
 	height: 30em;
 	margin: 0 auto;
-	transform-style: preserve-3d;
-	transition: transform 0.4s ease;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-webkit-transition: transform 0.4s ease;
+	-moz-transition: transform 0.4s ease;
+	-ms-transition: transform 0.4s ease;
 }
 
 .carousel-slide{
@@ -189,37 +193,45 @@ footer{
 }
 
 [slide-number="1"] { 
-	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
 }
 
 [slide-number="2"] { 
-	transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg);
+	-moz-transform: rotateY(90deg);
+	-ms-transform: rotateY(90deg);
 }
 
 [slide-number="3"] { 
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 }
 
 [slide-number="4"] { 
-	transform: rotateY(270deg);
+	-webkit-transform: rotateY(270deg);
+	-moz-transform: -moz-rotateY(270deg);
+	-ms-transform: rotateY(270deg);
 }
 
 .carousel-slide:nth-child(3) {
-  	-webkit-transform: translateZ(-10.5em) rotateY(180deg);
-  	-moz-transform: translateZ(-10.5em) rotateY(180deg);
+  	-webkit-transform: translateZ(-10.7em) rotateY(180deg);
+  	-moz-transform: translateZ(-10.5em) -moz-rotateY(180deg);
   	-ms-transform: translateZ(-10.5em) rotateY(180deg);
 }
 
 .carousel-slide:nth-child(2) {
   	-webkit-transform: rotateY(-270deg) translateX(10.8em);
-  	-moz-transform: rotateY(-270deg) translateX(10.8em);
+  	-moz-transform: rotateY(-270deg) -moz-translateX(10.8em);
   	-ms-transform: rotateY(-270deg) translateX(10.8em);
   	transform-origin: top right;
 }
 
 .carousel-slide:nth-child(4) {
   	-webkit-transform: rotateY(270deg) translateX(-10.7em);
-  	-moz-transform: rotateY(-270deg) translateX(-10.7em);
+  	-moz-transform: rotateY(-270deg) -moz-translateX(-10.7em);
   	-ms-transform: rotateY(-270deg) translateX(-10.7em);
   	transform-origin: center left;
 }
@@ -512,7 +524,7 @@ html, body{
 		margin-top: 0;
 		margin-bottom: 0.3em;
 	}
-	.contact-wrapper, #contact{
+	#contact-wrapper, #contact{
 		margin-top: -0.2em;
 		padding-top: -0.1em;
 	}
