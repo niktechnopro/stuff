@@ -33,7 +33,7 @@
        			<span class="icon-bar"></span>
       		</button>
 			</div>
-			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+			<div class="collapse navbar-collapse navbar-right collapse-in" id="myNavbar">
 			<ul class="nav navbar-nav text">
 				<li class="nav-item"><a class="scroll" href="#about-me">About Me</a></li>
 				<li class="nav-item"><a class="scroll" href="#what-I-know">What I know</a></li>
@@ -49,7 +49,7 @@
 	<!-- about me area -->
 	<section id="about-me">
 		<div class="container-fluid">
-			<h2 class="portfolio-title col-xs-12">About Me</h2>
+			<h2 class="portfolio-title col-xs-12 hid">About Me</h2>
 			<div class="row">
 			<div class="col-xs-12 col-sm-6 left-me text-center">
 				<p class="black alert alert-info">Hello I am Nikolas</p>
@@ -57,7 +57,7 @@
 				<img id="my-picture" src="./images/myself.jpg" alt="my picture" />
 			</div>
 			<div class="col-xs-12 col-sm-6 right-me text-center">
-				<p class="black alert alert-info">About Me</p>
+				<p class="black alert alert-info">My Story</p>
 				<!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
 				<p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developped interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
 				<!-- </div>				 -->
@@ -68,7 +68,7 @@
 
 	<section id="what-I-know">
 	<div class="container">
-		<h2 class="portfolio-title">What I know</h2>
+		<h2 class="portfolio-title know">What I know</h2>
 		<div class="row">
 			<div class="carousel-wrapper col-xs-12 col-sm-6">
 				<div class="carousel" slide-number="1">
@@ -97,7 +97,7 @@
 				<div class="next">></div>
 	  			<div class="prev"><</div>
 			</div><!--end of carousel wrapper-->
-			<div class="col-xs-12 col-sm-6">
+			<div class="col-xs-12 col-sm-6 logs">
 					<span class="col-xs-4 col-sm-3 logos" data-toggle="tooltip" data-placement="top" title="HTML5">
 						<img class="logo" src="./logos/html5-logo.png" alt="html5 logo" />
 					</span>
@@ -151,7 +151,7 @@
 	<!-- my portfolio area -->
 	<section id="portfolio">
 		<div class="container-fluid">
-			<h2 class="portfolio-title">My Works</h2>
+			<h2 class="portfolio-title works">My Works</h2>
 				<!-- first work -->
 				<div class="row port cs-style-3">
 				<div class="col-md-4 col-sm-6 col-xs-12 item-space">
@@ -181,7 +181,7 @@
                         <img src="certs/CSIS2.png" alt="img04">
                         <figcaption>
                             <h3>Better Doctor</h3>
-                            <span>React Redux NodeJS and Doctor API Project</span>
+                            <span>React Redux NodeJS<p>and Doctor API Project</p></span>
                             <a href="#" class="button" >Take a look</a>
 						</figcaption>
 					</figure>
@@ -194,7 +194,7 @@
 	<!-- Contact Area -->
 	<section id="contact" class="mapWrap">
 	<div id="googleMap"></div>
-	<div class="contact-wrapper">
+	<div id="contact-wrapper">
 		<h2 class="portfolio-title">Contact Me!</h2>
 		<div class="row">
 			<div class="left-side col-sm-6 text-center social">
@@ -269,6 +269,10 @@ $(document).ready(function(){
     	//animate is looking for css property
     	// scrollTop measures how far from top this  	
     })
+    //the following will collapse mobile navbar after click
+    $(".navbar-nav li a").click(function(event) {
+    	$(".navbar-collapse").collapse('hide');
+  	});
 });
 </script>
 </html>
