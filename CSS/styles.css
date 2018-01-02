@@ -499,6 +499,11 @@ footer{
       -webkit-transform: translateY(0%);
     }
   }
+
+  /*accounting for first section/navbar*/
+#about-me{
+	margin-top: 63px;
+  }
 /*@media (max-width: 800px){
 	
 }*/
