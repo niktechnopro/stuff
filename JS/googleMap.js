@@ -5,7 +5,7 @@ console.log('google map loading');
 
 var mapOptions = {
   center:new google.maps.LatLng(33.7537,-84.3850),
-  zoom:5,
+  zoom:6,
   mapTypeId:google.maps.MapTypeId.ROADMAP,
   disableDefaultUI: true,
   scrollwheel: false

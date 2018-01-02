@@ -191,12 +191,12 @@
 	</section>
 	<!-- end of my works -->
 	
-	<!-- Contact Area -->
-	<section id="contact" class="mapWrap">
+	<!-- Contact Areaclass="mapWrap" -->
+	<section id="contact"  class="mapWrap">
 	<div id="googleMap"></div>
 	<div id="contact-wrapper">
 		<h2 class="portfolio-title">Contact Me!</h2>
-		<div class="row">
+		<div class="row cont">
 			<div class="left-side col-sm-6 text-center social">
 				<div id="social">
 					<p class="normal-txt title text-center">Find me on</p>
@@ -228,7 +228,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="text-center"><a class="scroll" href="#about-me">back to top</a></div>
+			<div class="text-center"><a class="backtotop scroll" href="#about-me">back to top</a></div>
 		</div>
 	</div>
 	</section>
@@ -251,6 +251,7 @@
 <script src="./JS/googleMap.js"></script>
 <!-- <script src="./JS/" -->
 <script>
+
 $(document).ready(function(){
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
@@ -274,10 +275,21 @@ $(document).ready(function(){
     	$(".navbar-collapse").collapse('hide');
   	});
 
-    console.log($('#contact').outerHeight())
-    console.log($('#contact-wrapper').outerHeight())
-    console.log($('footer').outerHeight())
+  		let cont_section = $('#contact').outerHeight();
+	    let contact_wrapper = $('#contact-wrapper').outerHeight();
+	    let footer = $('footer').outerHeight();
+	    console.log(cont_section);
+	    console.log(contact_wrapper)
+	    console.log(footer);
+	    $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
+	    $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
 
+	$(window).on('resize',function(){
+		console.log('window resizing')
+	    $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
+	    $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
+	});
+    
 });
 </script>
 </html>
