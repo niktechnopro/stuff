@@ -192,7 +192,7 @@
 	<!-- end of my works -->
 	
 	<!-- Contact Areaclass="mapWrap" -->
-	<section id="contact"  class="mapWrap">
+	<section id="contact" class="mapWrap">
 	<div id="googleMap"></div>
 	<div id="contact-wrapper">
 		<h2 class="portfolio-title">Contact Me!</h2>
@@ -228,7 +228,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="text-center"><a class="backtotop scroll" href="#about-me">back to top</a></div>
+			<div class="text-center"><span class="backtotop scroll" href="#about-me">back to top</span></div>
 		</div>
 	</div>
 	</section>
@@ -275,20 +275,20 @@ $(document).ready(function(){
     	$(".navbar-collapse").collapse('hide');
   	});
 
-  		let cont_section = $('#contact').outerHeight();
-	    let contact_wrapper = $('#contact-wrapper').outerHeight();
-	    let footer = $('footer').outerHeight();
-	    console.log(cont_section);
-	    console.log(contact_wrapper)
-	    console.log(footer);
-	    $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
-	    $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
+  		// let cont_section = $('#contact').outerHeight();
+	   //  let contact_wrapper = $('#contact-wrapper').outerHeight();
+	   //  let footer = $('footer').outerHeight();
+	   //  console.log(cont_section);
+	   //  console.log(contact_wrapper)
+	   //  console.log(footer);
+	   //  $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
+	   //  $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
 
-	$(window).on('resize',function(){
-		console.log('window resizing')
-	    $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
-	    $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
-	});
+	// $(window).on('resize',function(){
+	// 	console.log('window resizing')
+	//     $('.cont').css("margin-bottom",`${cont_section-contact_wrapper-3*footer}px`);
+	//     $('#contact').css("min-height",`${cont_section-contact_wrapper-3*footer}px`);
+	// });
     
 });
 </script>
