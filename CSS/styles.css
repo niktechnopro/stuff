@@ -1,12 +1,13 @@
-/*body{
-	background-color: green;
-}*/
+/*webkit is a layout engine for safari and chrome*/
+html{
+	overflow-y: hidden;	
+}
 
-/* contact form*/
-
-.mapWrap {
-    position: relative;
-    /*min-height: 600px;*/
+body{
+	height: 100vh;
+	-webkit-overflow-scrolling: touch;
+	/*that is for mobile devices*/
+	overflow-y: auto;
 }
 
 #googleMap {
@@ -23,7 +24,7 @@
     padding: 30px 0px 30px 0px;
     position: relative;
     z-index: 1;
-    min-height: 91vh;
+    min-height: 89vh;
     margin-top: -0.2em;
 }
 
@@ -273,7 +274,7 @@ footer{
     font-weight: 300;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 0.5em;
+    /*margin-bottom: 0.5em;*/
 }
 
 .portfolio-title::before,.portfolio-title::after {
@@ -296,7 +297,7 @@ footer{
 
 .item-space {
     margin-bottom: 30px;
-}
+}    
 
 #portfolio{
 	padding: 80px 0px 0px 0px;
@@ -474,31 +475,29 @@ footer{
 
   /*accounting for first section/navbar*/
 #about-me{
-	margin-top: 63px;
+	margin-top: 4em;
+	min-height: 100vh;
   }
 
 #portfolio{
-	min-height: 100%;
+	min-height: 100vh;
 }
 
 #what-I-know{
-	min-height: 100%;
+	min-height: 100vh;
 }
 
 #about-me{
-	min-height: 100%;
+	min-height: 100vh;
 }
 
 #contact{
 	color: #fff;
-	margin-top:-0.1em;
 	min-height: 80%;
+	margin-top:-0.1em;
+	position: relative;
 }
 
-
-html, body{
-	height: 100%;
-}
 
 .works{
 	margin-top:-1em;
@@ -546,15 +545,6 @@ html, body{
 }
 
 
-/*.backtotop:active{
-	color: #fff;
-    font-size: 3em;
-    font-weight: 100;
-    padding-bottom: 10px;
-    border-bottom: 1px solid;
-    text-decoration: none;
-}*/
-
 .backtotop:hover {
 	text-decoration: none;
 	color:grey;
@@ -565,6 +555,7 @@ html, body{
     text-decoration: none;
 	cursor: pointer;
 }
+
 
 /*.backtotop {
 	color: #fff;
