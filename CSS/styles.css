@@ -7,7 +7,7 @@ body{
 	height: 100vh;
 	-webkit-overflow-scrolling: touch;
 	/*that is for mobile devices*/
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 }
 
 #googleMap {
