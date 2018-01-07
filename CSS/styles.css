@@ -352,6 +352,13 @@ footer{
 	transition: transform 0.4s;
 }
 
+.cs-style-3 figure:hover img{
+	-webkit-transform: translateY(-25px) scaleX(1.01);
+	-moz-transform: translateY(-25px) scaleX(1.01);
+	-ms-transform: translateY(-25px) scaleX(1.01);
+	transform: translateY(-25px) scaleX(1.01);
+}
+
 .cs-style-3 figcaption a {
 	position: absolute;
 	bottom: 31px;
