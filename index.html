@@ -38,13 +38,30 @@
 				<li class="nav-item"><a class="scroll" href="#what-I-know">What I know</a></li>
 				<li class="nav-item"><a class="scroll" href="#portfolio">My Works</a></li>
 				<li class="nav-item"><a class="scroll" href="#contact">Contact</a></li>
-				<li class="nav-item"><a class="scroll" href="">Resume</a></li>
+				<li class="nav-item"><a class="scroll" href="" data-toggle="modal" data-target="#myModal">Resume</a></li>
 			</ul>
 			</div>
 		</div>
 	</div>
-
-	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h4 class="modal-title text-center">My Resume</h4>
+			</div>
+			  <object data="./resume/resume.pdf#view=FitH" type="application/pdf" width="100%" height="850">
+				<p>
+					It appears your Web browser is not configured to display PDF files. No worries, just <a href="./resume/resume.pdf">click here to download the PDF file.</a>
+				</p>
+			</object>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<!-- end of my modal -->
 	<!-- about me area -->
 	<section id="about-me">
 		<div class="container-fluid slide">
@@ -56,6 +73,7 @@
 				<img id="my-picture" src="./images/myself.jpg" alt="my picture" />
 			</div>
 			<div class="col-xs-12 col-sm-6 right-me text-center">
+				<!-- <p class="black">My Story</p> -->
 				<p class="black alert alert-info">My Story</p>
 				<!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
 				<p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developped interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
@@ -66,7 +84,7 @@
 	</section>
 
 	<section id="what-I-know">
-	<div class="container">
+	<div class="container-fluid">
 		<h2 class="portfolio-title know">What I know</h2>
 		<div class="row">
 			<div class="carousel-wrapper col-xs-12 col-sm-6">
@@ -159,7 +177,7 @@
 						<figcaption>
 					        <h3>Focus!</h3>
 					        <span>Front End Project</span>
-					        <a href="#" class="button" >Take a look</a>
+					        <a href="https://github.com/niktechnopro/Focus" class="button" >GitHub</a>
 					    </figcaption>
 					</figure>
 				</div>
@@ -170,7 +188,7 @@
                         <figcaption>
                             <h3>Village</h3>
                             <span>Hackaton against violence Project</span>
-                            <a href="#" class="button" >Take a look</a>
+                            <a href="https://github.com/niktechnopro/Village" class="button" >GitHub</a>
 						</figcaption>
 					</figure>
                 </div>
@@ -179,9 +197,9 @@
                     <figure>
                         <img src="certs/CSIS2.png" alt="img04">
                         <figcaption>
-                            <h3>Better Doctor</h3>
+                            <h3>LocDoc</h3>
                             <span>React Redux NodeJS<p>and Doctor API Project</p></span>
-                            <a href="#" class="button" >Take a look</a>
+                            <a href="https://github.com/niktechnopro/LocDoc" class="button" >GitHub</a>
 						</figcaption>
 					</figure>
                 </div>
@@ -200,8 +218,8 @@
 				<div id="social">
 					<p class="normal-txt title text-center">Find me on</p>
 					<ul class="socialinks">
-                        <li class="social-icons"><a class="linkedin" href="#"></a></li>
-                        <li class="social-icons"><a class="google-plus" href="#"></a></li>
+                        <li class="social-icons"><a class="linkedin" href="https://www.linkedin.com/in/niktechnopro"></a></li>
+                        <li class="social-icons"><a class="github" href="https://github.com/niktechnopro"></a></li>
                         <!-- <li class="social-icons"><a class="github" href="#"></a></li> -->
                     </ul>
 				</div>
@@ -246,7 +264,9 @@
 	<!-- Footer end -->
 </body>
 <script src="./JS/carousel.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3lePloLKVu1xjO-wCQyVYm3xMx4tP_Eg"></script>
+<script src="./config/config.js">console.log('./config/config.google_key')</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3lePloLKVu1xjO-wCQyVYm3xMx4tP_Eg">
+</script>
 <script src="./JS/googleMap.js"></script>
 <!-- <script src="./JS/" -->
 <script>
