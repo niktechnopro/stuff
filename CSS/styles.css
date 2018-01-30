@@ -164,10 +164,10 @@ footer{
 .carousel-wrapper{
 	/*display: block;*/
 	/*max-width: 36%;*/
-	margin: 0 auto;
+	/* margin: -5% auto -5% auto; */
 	perspective:270em;
 	text-align: center;
-	margin-top: 8em;
+	margin-top: 3em;
 }
 
 .carousel {
@@ -248,25 +248,30 @@ footer{
 }
 
 .next, .prev {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 3em;
-  margin-top: 5.5em;
-  border-radius: 50%;
-  background: lightblue;
-  text-align: center;
-  line-height: 3;
-  color: black;
-  transform: translateY(-65%);
-  cursor: pointer;
-  margin: 3em;
+  	top: 70%;
+  	margin-top: 5.5em;
+  	text-align: center;
+  	transform: translateY(-165%);
+	cursor: pointer;
+  	transition: box-shadow 0.2s ease-in-out;
 }
 
-.prev {
-  left: 0;
+/* .prev{
+	left: 16em;
+} */
+
+/* .next:hover{
+	box-shadow: 1em 1em 2em rgba(50,105,206,0.8);
 }
- 
+
+.prev:hover{
+	box-shadow: 0em 1em 2em rgba(50,105,206,0.8);
+} */
+
+.github{
+	background-image: url(../images/githubb.png);
+}
+
 /*portfolio portion*/
 .portfolio-title{
 	font-size: 4em;
@@ -562,7 +567,9 @@ footer{
 	cursor: pointer;
 }
 
-
+.buttons{
+	margin: 0;
+}
 /*.backtotop {
 	color: #fff;
 }*/
