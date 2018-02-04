@@ -1,4 +1,4 @@
-console.log('google map loading');
+console.log('loading google map');
   ///////////////////////////////
   // google map
   ///////////////////////////////

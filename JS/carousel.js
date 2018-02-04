@@ -1,5 +1,5 @@
 //declaring global variables
-console.log("carousel is loading")
+console.log("loading carousel")
 
 
 function autoSpin(){

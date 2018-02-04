@@ -134,9 +134,11 @@ footer{
 
 /*//what I know portion*/
 .logo{
-	width: 90px;
-	box-shadow: 0px 0px 1px rgba(0,0,0,0.15);
+	margin-top: 1rem;
+	width: 80px;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.15);
   	transition: box-shadow 0.2s ease-in-out;
+  	border-radius: 3px;
 }
 
 .logos{
@@ -173,14 +175,14 @@ footer{
 .carousel {
 	position: relative;
 	width: 22em;
-	height: 30em;
+	height: 23em;
 	margin: 0 auto;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
-	-webkit-transition: transform 0.4s ease;
-	-moz-transition: transform 0.4s ease;
-	-ms-transition: transform 0.4s ease;
+	-webkit-transition: transform 0.8s ease;
+	-moz-transition: transform 0.8s ease;
+	-ms-transition: transform 0.8s ease;
 }
 
 .carousel-slide{
@@ -248,6 +250,7 @@ footer{
 }
 
 .next, .prev {
+	position: relative;
   	top: 70%;
   	margin-top: 5.5em;
   	text-align: center;
@@ -568,8 +571,11 @@ footer{
 }
 
 .buttons{
-	margin: 0;
+	margin-bottom: 1rem;
 }
 /*.backtotop {
 	color: #fff;
 }*/
+
+.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
