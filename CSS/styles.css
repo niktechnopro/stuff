@@ -20,10 +20,10 @@ body{
 
 #contact-wrapper{
 	background-color: rgba(0, 0, 0, 0.75) !important;
-    padding: 30px 0px 30px 0px;
+    padding: 5rem 0 5rem 0;
     position: relative;
     z-index: 1;
-    min-height: 89vh;
+    min-height: 100vh;
     margin-top: -0.2em;
 }
 
@@ -259,17 +259,6 @@ footer{
   	transition: box-shadow 0.2s ease-in-out;
 }
 
-/* .prev{
-	left: 16em;
-} */
-
-/* .next:hover{
-	box-shadow: 1em 1em 2em rgba(50,105,206,0.8);
-}
-
-.prev:hover{
-	box-shadow: 0em 1em 2em rgba(50,105,206,0.8);
-} */
 
 .github{
 	background-image: url(../images/githubb.png);
@@ -307,7 +296,7 @@ footer{
 }    
 
 #portfolio{
-	padding: 80px 0px 0px 0px;
+	padding: 10rem 0 0 0;
 }
 
 .port{
@@ -420,6 +409,14 @@ footer{
 	font-family: Lobster, Sans-Serif;
 }
 
+.desc{
+	color: black;
+	font-size: 2em;
+	text-align: center;
+	padding: 1em;
+	font-family: Lobster, Sans-Serif;
+}
+
 #my-title{
 	font-style: italic;
 	/*margin-top: 1em;*/
@@ -468,21 +465,21 @@ footer{
   }
   @keyframes slide {
     0% {
-      opacity: 0;
+      /*opacity: 0;*/
       transform: translateY(-100%);
     } 
     100% {
-      opacity: 1;
+      /*opacity: 1;*/
       transform: translateY(0%);
     }
   }
   @-webkit-keyframes slide {
     0% {
-      opacity: 0;
+      /*opacity: 0;*/
       -webkit-transform: translateY(-100%);
     } 
     100% {
-      opacity: 1;
+      /*opacity: 1;*/
       -webkit-transform: translateY(0%);
     }
   }
@@ -507,7 +504,7 @@ footer{
 
 #contact{
 	color: #fff;
-	min-height: 80%;
+	min-height: 100vh;
 	margin-top:-0.1em;
 	position: relative;
 }
@@ -515,7 +512,7 @@ footer{
 
 .works{
 	margin-top:-1em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 @media (max-width: 800px){
@@ -533,19 +530,34 @@ footer{
 	.hid{
 		margin-top: -3em;
 	}
-	/*.know{
-		margin-top: 0;
-		margin-bottom: 0.3em;
-	}*/
+	
 	#contact-wrapper, #contact{
 		margin-top: -0.2em;
-		padding-top: -0.1em;
+		padding-top: -0.2em;
 	}
+
 	.logs{
 		padding-bottom: -1.2em;
 	}
+	
 	#contact{
 		min-height: 100%;
+	}
+
+	.item-space{
+		margin-bottom: 0;
+	}
+
+	.me{
+		text-align: center;
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 1000px){
+	.desc{
+		padding: 0;
+		font-size: 2rem;
 	}
 }
 
@@ -573,9 +585,6 @@ footer{
 .buttons{
 	margin-bottom: 1rem;
 }
-/*.backtotop {
-	color: #fff;
-}*/
 
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
