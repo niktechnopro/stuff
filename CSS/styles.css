@@ -527,16 +527,16 @@ footer{
 		margin-top: 0em;
 	}
 
-	.logs{
+	/*.logs{
 		margin-top: -8em;
-	}
+	}*/
 	.hid{
 		margin-top: -3em;
 	}
-	.know{
+	/*.know{
 		margin-top: 0;
 		margin-bottom: 0.3em;
-	}
+	}*/
 	#contact-wrapper, #contact{
 		margin-top: -0.2em;
 		padding-top: -0.1em;
@@ -579,3 +579,7 @@ footer{
 
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
+
+#resume{
+	cursor: pointer;
+}
