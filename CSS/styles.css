@@ -1,4 +1,6 @@
 /*webkit is a layout engine for safari and chrome*/
+
+
 html{
 	/*overflow-y: hidden;	*/
 }
@@ -8,6 +10,7 @@ body{
 	-webkit-overflow-scrolling: touch;
 	/*that is for mobile devices*/
 	/*overflow-y: auto;*/
+	margin-right: 0;
 }
 
 #googleMap {
@@ -44,7 +47,7 @@ body{
 	max-width: 100%;
 	padding: 5px;
 	/* border-bottom: 1px solid; */
-	margin: 0 auto;
+	margin: 1rem auto 0 auto;
 	font-size: 3em;
 }
 
@@ -169,7 +172,7 @@ footer{
 	/* margin: -5% auto -5% auto; */
 	perspective:270em;
 	text-align: center;
-	margin-top: 3em;
+	margin-top: 5em;
 }
 
 .carousel {
@@ -247,16 +250,6 @@ footer{
 .certs{
 	width:300px;
 	height: 291px;
-}
-
-.next, .prev {
-	position: relative;
-  	top: 70%;
-  	margin-top: 5.5em;
-  	text-align: center;
-  	transform: translateY(-165%);
-	cursor: pointer;
-  	transition: box-shadow 0.2s ease-in-out;
 }
 
 
@@ -515,15 +508,34 @@ footer{
 	margin-bottom: 1em;
 }
 
+video{
+	/*height: 50rem;*/
+	width: 45rem;
+}
+
+@media (max-width: 1000px){
+	.desc{
+		padding: 0;
+		font-size: 2rem;
+	}
+
+	video{
+		width: 35rem;
+	}
+}
+
 @media (max-width: 800px){
 	.works{
 		margin-top: -1.2em;
 		margin-bottom: 0.2em;
 	}
 	.carousel-wrapper{
-		margin-top: 0em;
+		margin-top: 3em;
 	}
 
+	video{
+		width: 43rem;
+	}
 	/*.logs{
 		margin-top: -8em;
 	}*/
@@ -546,17 +558,11 @@ footer{
 
 	.item-space{
 		margin-bottom: 0;
+		text-align: center;
 	}
 
 	.me{
 		text-align: center;
-		font-size: 2rem;
-	}
-}
-
-@media (max-width: 1000px){
-	.desc{
-		padding: 0;
 		font-size: 2rem;
 	}
 }
@@ -591,4 +597,9 @@ footer{
 
 #resume{
 	cursor: pointer;
+}
+
+.presentation{
+	/*width: 100%;*/
+	/*height: 50%;*/
 }
