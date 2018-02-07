@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>My Personal Portfolio Page</title>
+	<title>My Personal Page</title>
 	<meta charset="UTF-8">
 	<!-- meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="title" content="portfolio">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="images/CSISICO.png" type="image/png">
+	<link rel="shortcut icon" href="images/CSISICO.png" type="image/png">
 	<!-- stylesheets -->
 	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster"> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./CSS/bootstrap.min.css">
 	<link rel="stylesheet" href="./CSS/styles.css" />
 	<!-- jQuery library -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.js"
-	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	  crossorigin="anonymous"></script>
+	<script src="./JS/jquery-3.3.1.min.js"></script>
 	<!-- bootstrap js library -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./JS/bootstrap.min.js"></script>
 	<script src="./JS/isotope.pkgd.js"></script>
 </head>
 <body>
@@ -52,7 +51,7 @@
 			  <h4 class="modal-title text-center">My Resume</h4>
 			</div>
 			  <object data="./resume/resume.pdf#view=FitV" type="application/pdf" width="100%" height="850">
-				<p>
+				<p id="resumeerror">
 					It appears your Web browser is not configured to display PDF files. No worries, just <a href="./resume/resume.pdf">click here to download the PDF file.</a>
 				</p>
 			</object>
@@ -77,7 +76,7 @@
 				<!-- <p class="black">My Story</p> -->
 				<p class="black alert alert-info">My Story</p>
 				<!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
-				<p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developped interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
+				<p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developed an interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
 				<!-- </div>				 -->
 			</div>
 		</div>
@@ -98,8 +97,8 @@
         		</div>
 
 		        <div class="grid">
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="HTML5 - provides the structure"><img class="logo front" src="./logos/html5-logo.png" alt="html5 logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="CSS-learn something new everytime I use it"><img class="logo" src="./logos/css-logo.png" alt="css logo" /></div>
+		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="HTML5 - markup language that defines the structure of HTML page"><img class="logo front" src="./logos/html5-logo.png" alt="html5 logo" /></div>
+		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="CSS - tells the browser how to present data, I learn new tricks everytime I use it"><img class="logo" src="./logos/css-logo.png" alt="css logo" /></div>
 		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="JavaScript - object-oriented scripting language"><img class="logo" src="./logos/js-logo.png" alt="js-logo"/></div>
 		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="jQuery - write less do more"><img class="logo" src="./logos/jquery-logo.png" alt="jQuery logo"/></div>
 		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Bootstrap - I use this front-end framework for faster and easier web development"><img class="logo" src="./logos/bootstrap-logo.png" alt="bootstrap-logo" /></div>
@@ -197,10 +196,10 @@
 				<!-- my third work -->
 				<div class="col-md-4 col-sm-6 col-xs-12 item-space">
                     <figure>
-                        <img src="certs/CSIS2.png" alt="img04">
+                        <img src="./images/locdocscreenshot.png" alt="Loc Doc Screenshot">
                         <figcaption>
                             <h3>LocDoc</h3>
-                            <span>React Redux NodeJS<p>and Doctor API Project</p></span>
+                            <span>React Redux NodeJS<p>Geolocation API and Doctor API Project</p></span>
                             <a href="https://github.com/niktechnopro/LocDoc" class="button" >GitHub</a>
 						</figcaption>
 					</figure>
