@@ -23,6 +23,8 @@ app.use(function(req, res, next){
     next();
 })
 
+// creating a server
+var server = http.createServer(app);
 
 // setup database
 // var db = mysql.createConnection(config.db);
@@ -48,7 +50,7 @@ app.use(function(req, res, next){
 // })
 //mailer veryfied
 
-var server = http.createServer(app);
+
 const date = new Date()
 
 app.use((req, res, next) => { //logging info about date, location and method used
@@ -121,8 +123,8 @@ app.post('/registerForm', (req, res)=>{
 })
 //the following is to get chatBot transcript
 app.post('/send',(req, res)=>{
-    console.log('message came to our send route')
-    console.log(req.body)
+    console.log('message came to our send route: ', req.body)
+    res.json({message: 'success'})
     // let email = req.body.email;
     // console.log('receiving transcript', transcript, typeof(transcript));
     // console.log('receiving email', email, typeof(email));

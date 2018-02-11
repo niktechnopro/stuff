@@ -1,4 +1,6 @@
 console.log('loading pagescroll')
+//reading submit button by attribute
+let $submitButton = $('[submitButton]')
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }
@@ -45,5 +47,51 @@ $(document).ready(function(){
 	$(".clicker").click(function(event) {
 		$(".navbar-collapse").collapse('hide');
   	});
+
+    // section for contact form ajax post request
+    $submitButton.on('click', (event)=>{
+        event.preventDefault()//
+        //reading data from fields
+        name = $('[name = "name"]').val().trim()
+        email = $('[name = "email"]').val().trim()
+        message = $('[name = "textarea"]').val().trim()
+        //making an object with info
+        data = {
+            name : name,
+            email : email,
+            message : message
+        }
+        //making ajax post request to route /send
+        $.ajax({
+            url: "/send",
+            method: "POST",
+            data: data,
+            dataType: "JSON"
+            
+        }).done(result => {
+            // console.log("this is done message ", result)
+            if (result.message == 'success'){
+                swal({
+                title: "Thank You For Your Interest!",
+                text: "Press OK button to exit",
+                icon: "success",
+                button: "OK!"
+                }).then((result)=>{
+                    console.log('back to about-me section')
+                    // window.location.href = "#about-me";//redirects back to about-me section
+                    //the following will account for header height
+                    let position = $('#about-me').offset().top - headerHeight;
+                    // console.log("navigation clicked", $(linkRef).offset().top, headerHeight, position);
+                    $('html, body').animate({
+                        scrollTop : position
+                        }, 500)
+                })
+            }
+        })
+        .fail(error=>{
+            console.log('error ocured: ', error)
+        })
+        console.log('reading info from fields', data)
+    })
 
 });
