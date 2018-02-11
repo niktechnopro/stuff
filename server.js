@@ -4,8 +4,9 @@ const path = require('path');
 const mysql = require('mysql')
 const bodyParser = require('body-parser');
 const mailer = require('nodemailer'); //this is for sending mail
-// const config = require('./config/config'); //config file with db and email info
+const config = require('./config/config'); //config file with db and email info
 //config leaves in config directory
+// console.log(config)
 const app = express();
 const port = process.env.PORT || 3000; //configures to available port based on
 //enviroment variable or port 3000 by default - for easier management
@@ -22,21 +23,19 @@ app.use(function(req, res, next){
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })
-
 // creating a server
 var server = http.createServer(app);
-
 // setup database
-// var db = mysql.createConnection(config.db);
-// db.connect ((error) => { //connecting to our database
-//     if (error){
-//         console.log('could not connect to database')
-//         throw error;// commented out so the server would not crash
-//         return;
-//     }else{
-//         console.log("connection to db = success!");
-//     }
-// })
+var db = mysql.createConnection(config.db);
+db.connect ((error) => { //connecting to our database
+    if (error){
+        console.log('could not connect to database')
+        throw error;// commented out so the server would not crash
+        return;
+    }else{
+        console.log("connection to db = success!");
+    }
+})
 //db veryfied
 
 //mailer setup
@@ -124,7 +123,18 @@ app.post('/registerForm', (req, res)=>{
 //the following is to get chatBot transcript
 app.post('/send',(req, res)=>{
     console.log('message came to our send route: ', req.body)
-    res.json({message: 'success'})
+    let message = req.body;
+    console.log(req.body.name)
+    const insertQuery = `INSERT INTO joboffertable (name, email, message) VALUES (?,?,?);`
+    db.query(insertQuery, [message.name, message.email, message.message], (error)=>{
+        if (error){
+            console.log("error inserting into database");
+            return
+        }else{
+            console.log("succesful insertion into database");
+            res.json({message: 'success'})
+        }
+    })
     // let email = req.body.email;
     // console.log('receiving transcript', transcript, typeof(transcript));
     // console.log('receiving email', email, typeof(email));

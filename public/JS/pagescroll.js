@@ -1,6 +1,7 @@
-console.log('loading pagescroll')
+console.log('loading pagescroll');
 //reading submit button by attribute
-let $submitButton = $('[submitButton]')
+let $submitButton = $('[submitButton]');
+var $form = $('[formReset]')[0];//referencing my table here
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }
@@ -61,6 +62,10 @@ $(document).ready(function(){
             email : email,
             message : message
         }
+        console.log('reading info from fields', data)
+        //clearing fields
+        // console.log($form)
+        $form.reset()
         //making ajax post request to route /send
         $.ajax({
             url: "/send",
@@ -72,8 +77,8 @@ $(document).ready(function(){
             // console.log("this is done message ", result)
             if (result.message == 'success'){
                 swal({
-                title: "Thank You For Your Interest!",
-                text: "Press OK button to exit",
+                title: "Thank You For Your Interest! \nI'll get back to you shortly",
+                text: "Press OK button",
                 icon: "success",
                 button: "OK!"
                 }).then((result)=>{
@@ -91,7 +96,6 @@ $(document).ready(function(){
         .fail(error=>{
             console.log('error ocured: ', error)
         })
-        console.log('reading info from fields', data)
     })
 
 });
