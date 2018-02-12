@@ -519,10 +519,10 @@ footer{
 	margin-bottom: 1em;
 }
 
-video{
-	/*height: 50rem;*/
+/*video{
+	height: 50rem;
 	width: 45rem;
-}
+}*/
 
 @media (max-width: 1000px){
 	.desc{

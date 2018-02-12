@@ -75,14 +75,14 @@ app.get('/', (req, res) => {
 //the following is to get chatBot transcript
 app.post('/send',(req, res)=>{
     // console.log('message came to our send route: ', req.body)
-    let myJSON = JSON.stringify(req.body)
+    let message = req.body;
+    let myJSON = JSON.stringify(message)
     let mailOptions={//email options
                 to : config.myemail,
                 subject : 'someone is interested in you',
                 text: myJSON
                 }
     // console.log(mailOptions)
-    let message = req.body;
     // console.log(req.body.name)
     const insertQuery = `INSERT INTO joboffertable (name, email, message) VALUES (?,?,?);`
     var mydbPromise = new Promise(function(resolve, reject){
@@ -96,8 +96,8 @@ app.post('/send',(req, res)=>{
             }
         })
     })
-    //so this data is what being passed from resolve({message: 'success'})
     mydbPromise.then((dbresults)=>{
+            // console.log(dbresults);
             var mailerPromise = new Promise((resolve, reject)=>{
                 smtpTransport.sendMail(mailOptions, function(error, response){
                 if(error){
@@ -108,11 +108,12 @@ app.post('/send',(req, res)=>{
                     resolve({message : 'success'})
                     }
                 })
-            }).then(mailerresults=>
-                res.json(mailerresults)
-            )
+            }).then((mailerresults)=>{
+                // console.log(mailerresults);
+                res.json(mailerresults);
+            })
         }).catch((error)=>{
-            console.log('error occured: ', error)
+            console.log('error occured: ', error);
         })
 });
     

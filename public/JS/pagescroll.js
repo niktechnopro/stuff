@@ -3,8 +3,8 @@ console.log('loading pagescroll');
 let $submitButton = $('[submitButton]');
 var $form = $('[formReset]')[0];//referencing my table here
 // As per the HTML5 Specification
-// var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-var emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]){2,}$/;
+var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }

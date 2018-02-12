@@ -1,0 +1,17 @@
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+		/* And any immediate children */
+	& > * {
+		flex-basis: 100%;
+	}
+}
