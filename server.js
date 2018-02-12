@@ -30,7 +30,7 @@ var db = mysql.createConnection(config.db);
 db.connect ((error) => { //connecting to our database
     if (error){
         console.log('could not connect to database')
-        throw error;// commented out so the server would not crash
+        //throw error;// commented out so the server would not crash
         return;
     }else{
         console.log("connection to db = success!");
@@ -38,15 +38,18 @@ db.connect ((error) => { //connecting to our database
 })
 //db veryfied
 
+// console.log(config.myemail)
 //mailer setup
-// var smtpTransport = mailer.createTransport(config.mailer);
-// smtpTransport.verify((error)=>{//to verify connection use this
-//     if(error){
-//         console.log('smtpProtocol error', error);
-//     }else{
-//         console.log('server is ready to send email messages!')
-//     }
-// })
+var smtpTransport = mailer.createTransport(config.mailer);
+smtpTransport.verify((error)=>{//to verify connection use this
+    if(error){
+        console.log('smtpProtocol error', error);
+        return
+    }else{
+        console.log('server is ready to send email messages!')
+        return
+    }
+})
 //mailer veryfied
 
 
@@ -68,93 +71,49 @@ app.get('/', (req, res) => {
     res.sendFile('index.html');
 });
 
-//reading from contact form
-app.post('/registerForm', (req, res)=>{
-    console.log('receiving data from registration page')
-    const first_name = req.body.first_name;
-    const last_name = req.body.last_name;
-    const email = req.body.email;
-    const password = req.body.password2;
-    const child_name = req.body.child_name;
-    const relationship = req.body.relationship;
-    const child_username = req.body.child_username;
-    const fav_color = req.body.favorite_color;
-    const gender = req.body.boygirl;
 
-    const hash = bcrypt.hashSync(password);
-    console.log(first_name, last_name, email, password, child_name, relationship, child_username, gender)
-    const selectQuery = `SELECT pw,child_name FROM parents WHERE email = ?;`;
-    // console.log(hash);
-    const dbQuery = db.query(selectQuery, [email],(error, results)=>{
-        // console.log(dbQuery);
-        //did this return a row? If so, the user already exists
-        if (results.length != 0){
-            console.log("user's child is in database, must login now: ", child_name)
-            res.render('index',{
-                onLoad: 1
-             });
-        }else{
-            //this is a new user - insert them - user must register
-            console.log('user must be inserted')
-            const insertQuery = `INSERT INTO parents (first_name, last_name, email, pw, child_name, relationship, child_username, fav_color, gender) VALUES (?,?,?,?,?,?,?,?,?);`;
-            // const childQuery = `SELECT child_name FROM parents where email = ?;`;
-            db.query(insertQuery, [first_name, last_name, email, hash, child_name, relationship, child_username, fav_color, gender], (error)=>{
-                if (error){
-                    console.log('error inserting into database')
-                    // throw error;
-                    return
-                }else{
-                    console.log('succesful insertion into databse, automatic login next');
-                    console.log('child_name: ', child_name, 'childs: ', gender);
-                    //serving the right avatar for a child
-                    (gender==='boy') ? child="images/iconKid.svg" : child="images/iconKid2.png";
-                    console.log('producing avatar', child);
-                    res.render('chatBot',{
-                        greeting: `Hello ${child_name}!`,
-                        child_avatar: child,
-                        email: email
-                    });
-                    
-                }
-            })
-        }
-    })
-})
 //the following is to get chatBot transcript
 app.post('/send',(req, res)=>{
-    console.log('message came to our send route: ', req.body)
+    // console.log('message came to our send route: ', req.body)
+    let myJSON = JSON.stringify(req.body)
+    let mailOptions={//email options
+                to : config.myemail,
+                subject : 'someone is interested in you',
+                text: myJSON
+                }
+    // console.log(mailOptions)
     let message = req.body;
-    console.log(req.body.name)
+    // console.log(req.body.name)
     const insertQuery = `INSERT INTO joboffertable (name, email, message) VALUES (?,?,?);`
-    db.query(insertQuery, [message.name, message.email, message.message], (error)=>{
-        if (error){
-            console.log("error inserting into database");
-            return
-        }else{
-            console.log("succesful insertion into database");
-            res.json({message: 'success'})
-        }
+    var mydbPromise = new Promise(function(resolve, reject){
+        db.query(insertQuery, [message.name, message.email, message.message], (error, result)=>{
+            if (error){
+                console.log("error inserting into database");
+                reject(error)
+            }else{
+                console.log("succesful insertion into database");
+                resolve({message : 'success'})//this is what passed as argument in then
+            }
+        })
     })
-    // let email = req.body.email;
-    // console.log('receiving transcript', transcript, typeof(transcript));
-    // console.log('receiving email', email, typeof(email));
-    //     let mailOptions={
-    //     to : email,
-    //     subject : 'chatBot transcript',
-    //     text: transcript
-    //     }
-    //     console.log(mailOptions);
-    //     res.end('success');
-    //     smtpTransport.sendMail(mailOptions, function(error, response){
-    //     if(error){
-    //         console.log("error occured when sending mail, terminating response process", error);
-    //         res.end("error");
-    //     }else{
-    //         // console.log(JSON.stringify(response))
-    //         console.log("Message sent, terminating response process");
-    //         res.end("success");
-    //     }
-    // });
+    //so this data is what being passed from resolve({message: 'success'})
+    mydbPromise.then((dbresults)=>{
+            var mailerPromise = new Promise((resolve, reject)=>{
+                smtpTransport.sendMail(mailOptions, function(error, response){
+                if(error){
+                    console.log("error occured when sending mail, terminating response process", error);
+                    reject(error)
+                }else{
+                    console.log("Message sent, terminating response process");
+                    resolve({message : 'success'})
+                    }
+                })
+            }).then(mailerresults=>
+                res.json(mailerresults)
+            )
+        }).catch((error)=>{
+            console.log('error occured: ', error)
+        })
 });
     
 
