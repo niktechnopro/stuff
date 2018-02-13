@@ -1,8 +1,8 @@
 /*webkit is a layout engine for safari and chrome*/
-
-
-html{
-	/*overflow-y: hidden;	*/
+/*use anti-alias to prevent text fading out during transition*/
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body{
@@ -28,7 +28,7 @@ body{
     z-index: 1;
     /*this 100vh covers whole map*/
     min-height: 100vh;
-    margin-top: -0.2em;
+    margin-top: -1.2em;
 }
 
 .normal-txt {
@@ -267,12 +267,11 @@ footer{
 
 /*portfolio portion*/
 .portfolio-title{
-	font-size: 4em;
+	font-size: 2em;
     font-weight: 300;
     text-align: center;
     overflow: hidden;
     /*margin-bottom: 0.5em;*/
-    /*margin-top: 0.5em;*/
 }
 
 .portfolio-title::before,.portfolio-title::after {
@@ -293,9 +292,6 @@ footer{
     margin-right: -42%;
 }
 
-/*.item-space {
-    margin-bottom: 30px;
-}    */
 
 .port{
 	list-style: none;
@@ -312,8 +308,8 @@ footer{
 	max-width: 100%;
 	display: block;
 	position: relative;
-	border: 1px solid grey;
-	border-radius: 1em;
+	/*border: 1px solid grey;*/
+	/*border-radius: 1em;*/
 }
 
 .port figcaption {
@@ -510,10 +506,6 @@ footer{
 	position: relative;
 }
 
-/*.contact{
-	margin-top: -0.5em;
-}
-*/
 
 .backtotop{
 	color: #fff;
@@ -558,78 +550,76 @@ footer{
 	margin: 0 auto;
 }
 
-section {
+section{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: stretch;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 450px){
 	.portfolio-title{
-		margin-bottom: 1.5em;
+		margin-bottom: 1.5rem;
 	}
 	.know{
-		margin-top: -2.5em;
+		margin-top: -0.5rem;
 	}
 	.hid{
-		margin-top: -0.5em;
-		margin-bottom: 1em;
+		margin-top: -4rem;
+		margin-bottom: 1rem;
 	}
 	.works{
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 }
 
 @media only screen and (min-width: 768px){
 	.portfolio-title{
-		margin-bottom: 1.5em;
+		margin-bottom: 1.5rem;
 	}
 	.know{
-		margin-top: -2.5em;
+		margin-top: -2.5rem;
 	}
 	.hid{
-		margin-top: -0.5em;
-		margin-bottom: 1em;
+		margin-top: -0.5rem;
+		margin-bottom: 1rem;
 	}
 	.works{
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 }
 
 @media only screen and (min-width: 1024px){
-	/*.portfolio-title{
-		margin-top: 0;
-		margin-bottom: 0;
-	}*/
+	.portfolio-title{
+		font-size: 4em;
+		}
 	.know{
-		margin-top: -0.5em;
-		margin-bottom: 0.3em;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
 	}
 	.hid{
-		margin-top: 0em;
-		margin-bottom: 0em;
+		margin-top: 1.5rem;
+		margin-bottom: 0rem;
 	}
 	.works{
-		margin-top: -1.5em;
-		margin-bottom: 1.5em;
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
 	}
 	.desc{
-		font-size: 1.7em;
+		font-size: 2.7rem;
 	}
 	.me{
-		font-size: 1.7em;
+		font-size: 2.7rem;
 	}
+	section {
+	    display: inherit;
+	}
+
 }
 
-@media only screen and (min-width: 1366px){
+/*@media only screen and (min-width: 1366px){
 	.know{
-		margin-top: -1.5em;
-		margin-bottom: 0.5em;
-	}
-	.hid{
-		margin-top: 0em;
-		margin-bottom: 0em;
+		margin-bottom: 3rem;
 	}
 	.works{
 		margin-top: -1.5em;
@@ -641,4 +631,5 @@ section {
 	.me{
 		font-size: 2em;
 	}
-}
+}*/
+

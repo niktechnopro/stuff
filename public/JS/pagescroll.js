@@ -30,11 +30,14 @@ $(document).ready(function(){
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
     // this portion is for smooth scrolling
+    // calculating the header style
     var headerHeight = $('.header').outerHeight();
+    console.log('Header height', headerHeight)
     var scrollLink = $('.scroll');
     scrollLink.click(function(e){ //e refers that there is an event
     	e.preventDefault();//preventing default action=hard jump
-    	let linkRef = $(this).attr('href');
+    	// calculating position of secsion
+        let linkRef = $(this).attr('href');
     	//the following will account for header height
     	let position = $(linkRef).offset().top - headerHeight;
     	// console.log("navigation clicked", $(linkRef).offset().top, headerHeight, position);
