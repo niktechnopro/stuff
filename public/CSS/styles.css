@@ -26,6 +26,7 @@ body{
     padding: 5rem 0 5rem 0;
     position: relative;
     z-index: 1;
+    /*this 100vh covers whole map*/
     min-height: 100vh;
     margin-top: -0.2em;
 }
@@ -271,6 +272,7 @@ footer{
     text-align: center;
     overflow: hidden;
     /*margin-bottom: 0.5em;*/
+    /*margin-top: 0.5em;*/
 }
 
 .portfolio-title::before,.portfolio-title::after {
@@ -291,13 +293,9 @@ footer{
     margin-right: -42%;
 }
 
-.item-space {
+/*.item-space {
     margin-bottom: 30px;
-}    
-
-#portfolio{
-	padding: 10rem 0 0 0;
-}
+}    */
 
 .port{
 	list-style: none;
@@ -406,17 +404,18 @@ footer{
 
 .me{
 	color: black;
-	font-size: 2em;
-	text-align: left;
+	font-size: 1.5em;
+	text-align: center;
 	font-family: Lobster, Sans-Serif;
 }
 
 .desc{
 	color: black;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-align: center;
 	padding: 1em;
 	font-family: Lobster, Sans-Serif;
+	margin-bottom: 0;
 }
 
 #my-title{
@@ -461,36 +460,38 @@ footer{
 .slide {
       animation-name: slide;
       -webkit-animation-name: slide;
-      animation-duration: 1s;
+      animation-duration: 0.9s;
       animation-delay: 10ms;
-      -webkit-animation-duration: 1s;
+      -webkit-animation-duration: 0.9s;
       -webkit-animation-delay: 10ms;
       visibility: visible;
   }
+
+  /*have to use pixels on keyframes, because % make it choppy*/
   @keyframes slide {
-    0% {
+    from {
       /*opacity: 0;*/
-      transform: translateY(-100%);
+      transform: translateY(-1000px);
     } 
-    100% {
+    to {
       /*opacity: 1;*/
-      transform: translateY(0%);
+      transform: translateY(0px);
     }
   }
   @-webkit-keyframes slide {
-    0% {
+    from {
       /*opacity: 0;*/
-      -webkit-transform: translateY(-100%);
+      -webkit-transform: translateY(-1000px);
     } 
-    100% {
+    to {
       /*opacity: 1;*/
-      -webkit-transform: translateY(0%);
+      -webkit-transform: translateY(0px);
     }
   }
 
   /*accounting for first section/navbar*/
 #about-me{
-	margin-top: 4em;
+	margin-top: 4rem;
 	min-height: 100vh;
   }
 
@@ -502,10 +503,6 @@ footer{
 	min-height: 100vh;
 }
 
-#about-me{
-	min-height: 100vh;
-}
-
 #contact{
 	color: #fff;
 	min-height: 100vh;
@@ -513,70 +510,10 @@ footer{
 	position: relative;
 }
 
-
-.works{
-	margin-top:-1em;
-	margin-bottom: 1em;
+/*.contact{
+	margin-top: -0.5em;
 }
-
-/*video{
-	height: 50rem;
-	width: 45rem;
-}*/
-
-@media (max-width: 1000px){
-	.desc{
-		padding: 0;
-		font-size: 2rem;
-	}
-
-	video{
-		width: 35rem;
-	}
-}
-
-@media (max-width: 800px){
-	.works{
-		margin-top: -1.2em;
-		margin-bottom: 0.2em;
-	}
-	.carousel-wrapper{
-		margin-top: 3em;
-	}
-
-	video{
-		width: 43rem;
-	}
-	/*.logs{
-		margin-top: -8em;
-	}*/
-	.hid{
-		margin-top: -3em;
-	}
-	
-	#contact-wrapper, #contact{
-		margin-top: -0.2em;
-		padding-top: -0.2em;
-	}
-
-	.logs{
-		padding-bottom: -1.2em;
-	}
-	
-	#contact{
-		min-height: 100%;
-	}
-
-	.item-space{
-		margin-bottom: 0;
-		text-align: center;
-	}
-
-	.me{
-		text-align: center;
-		font-size: 2rem;
-	}
-}
+*/
 
 .backtotop{
 	color: #fff;
@@ -619,4 +556,93 @@ footer{
 	text-align: center;
 	width: 80%;
 	margin: 0 auto;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+
+@media only screen and (min-width: 768px){
+	.portfolio-title{
+		margin-bottom: 1.5em;
+	}
+	.know{
+		margin-top: -2.5em;
+	}
+	.hid{
+		margin-top: -0.5em;
+		margin-bottom: 1em;
+	}
+	.works{
+		margin-bottom: 1em;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.portfolio-title{
+		margin-bottom: 1.5em;
+	}
+	.know{
+		margin-top: -2.5em;
+	}
+	.hid{
+		margin-top: -0.5em;
+		margin-bottom: 1em;
+	}
+	.works{
+		margin-bottom: 1em;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	/*.portfolio-title{
+		margin-top: 0;
+		margin-bottom: 0;
+	}*/
+	.know{
+		margin-top: -0.5em;
+		margin-bottom: 0.3em;
+	}
+	.hid{
+		margin-top: 0em;
+		margin-bottom: 0em;
+	}
+	.works{
+		margin-top: -1.5em;
+		margin-bottom: 1.5em;
+	}
+	.desc{
+		font-size: 1.7em;
+	}
+	.me{
+		font-size: 1.7em;
+	}
+}
+
+@media only screen and (min-width: 1366px){
+	/*.portfolio-title{
+		margin-top: 0;
+		margin-bottom: 0;
+	}*/
+	.know{
+		margin-top: -1.5em;
+		margin-bottom: 0.5em;
+	}
+	.hid{
+		margin-top: 0em;
+		margin-bottom: 0em;
+	}
+	.works{
+		margin-top: -1.5em;
+		margin-bottom: 1.5em;
+	}
+	.desc{
+		font-size: 2em;
+	}
+	.me{
+		font-size: 2em;
+	}
 }

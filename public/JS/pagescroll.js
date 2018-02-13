@@ -11,6 +11,7 @@ var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 $(window).on('beforeunload', function(){
   $(window).scrollTop(-1000); //to reposition page to top on reload
 });
+
 $(document).ready(function(){
     //section for isotope
     var $grid = $('.grid').isotope({ // initialization
@@ -29,7 +30,7 @@ $(document).ready(function(){
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
     // this portion is for smooth scrolling
-    var headerHeight = $('.header').outerHeight() - 15;
+    var headerHeight = $('.header').outerHeight();
     var scrollLink = $('.scroll');
     scrollLink.click(function(e){ //e refers that there is an event
     	e.preventDefault();//preventing default action=hard jump
