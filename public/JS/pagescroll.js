@@ -32,9 +32,9 @@ $(document).ready(function(){
     // this portion is for smooth scrolling
     // calculating the header style
     var headerHeight = $('.header').outerHeight();
-    console.log('Header height', headerHeight)
+    // console.log('Header height', headerHeight)
     var scrollLink = $('.scroll');
-    scrollLink.click(function(e){ //e refers that there is an event
+    scrollLink.click(function(e){ //e refers that there is an event 
     	e.preventDefault();//preventing default action=hard jump
     	// calculating position of secsion
         let linkRef = $(this).attr('href');

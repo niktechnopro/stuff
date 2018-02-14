@@ -487,7 +487,6 @@ footer{
 
   /*accounting for first section/navbar*/
 #about-me{
-	margin-top: 4rem;
 	min-height: 100vh;
   }
 
@@ -532,6 +531,10 @@ footer{
 	margin-bottom: 1rem;
 }
 
+.itcerts{
+	font-size: 2rem;
+}
+
 .grid-item { width: 25%; }
 .grid-item--width2 { width: 50%; }
 
@@ -550,30 +553,36 @@ footer{
 	margin: 0 auto;
 }
 
-section{
+#what-I-know .me{
+		font-size: 2.2rem;
+	}
+/*section{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: stretch;
-}
+}*/
 
 @media only screen and (min-width: 450px){
 	.portfolio-title{
 		margin-bottom: 1.5rem;
 	}
 	.know{
-		margin-top: -0.5rem;
+		margin-top: 0.5rem;
 	}
 	.hid{
-		margin-top: -4rem;
+		margin-top: 2rem;
 		margin-bottom: 1rem;
+	}
+	#about-me .me{
+		font-size: 2.2rem;
 	}
 	.works{
 		margin-bottom: 1rem;
 	}
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 766px){
 	.portfolio-title{
 		margin-bottom: 1.5rem;
 	}
@@ -589,47 +598,132 @@ section{
 	}
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 766px) and (orientation: portrait){
+	/*body{
+		background-color: blue;
+	}*/
+	.portfolio-title{
+		margin-bottom: 4.5rem;
+		font-size: 5rem;
+	}
+	.know{
+		margin-top: 4.5rem;
+		margin-bottom: 8rem;
+	}
+	.hid{
+		margin-top: 10.5rem;
+		margin-bottom: 3rem;
+	}
+	.works{
+		margin-bottom: 4rem;
+	}
+	.me{
+		font-size: 2.1rem;
+	}
+	#what-I-know .me{
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (min-width: 1020px){
 	.portfolio-title{
 		font-size: 4em;
 		}
+	.hid{
+		margin-top: 7.5rem;
+		margin-bottom: 1rem;
+	}
 	.know{
 		margin-top: 0rem;
 		margin-bottom: 0rem;
 	}
-	.hid{
-		margin-top: 1.5rem;
-		margin-bottom: 0rem;
-	}
+
 	.works{
 		margin-top: 3rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
 	}
 	.desc{
 		font-size: 2.7rem;
 	}
-	.me{
-		font-size: 2.7rem;
-	}
-	section {
-	    display: inherit;
+	#about-me .me{
+		font-size: 2.2rem;
 	}
 
 }
 
-/*@media only screen and (min-width: 1366px){
-	.know{
-		margin-bottom: 3rem;
+
+@media only screen and (min-width: 1020px) and (orientation: portrait){
+	.portfolio-title{
+		font-size: 6em;
+		}
+
+	.hid{
+		margin-top: 7.5rem;
+		margin-bottom: 1rem;
 	}
+
+	#my-title{
+		font-size: 4rem;
+		margin-bottom: 7rem;
+    	margin-top: 7rem;
+	}
+
+	.know{
+		margin-top: 6rem;
+		margin-bottom: 12rem;
+	}
+
+	#what-I-know .me{
+		font-size: 3rem;
+	}
+
 	.works{
-		margin-top: -1.5em;
-		margin-bottom: 1.5em;
+		margin-top: 8rem;
+		margin-bottom: 14rem;
 	}
 	.desc{
-		font-size: 2em;
+		font-size: 3rem;
 	}
-	.me{
-		font-size: 2em;
+	#about-me .me{
+		font-size: 3rem;
 	}
-}*/
+	.black{
+		font-size: 6rem;
+	}
+}
+
+
+@media only screen and (min-width: 1360px){
+	.portfolio-title{
+		font-size: 6rem;
+		font-weight: 300;
+		}
+	.hid{
+		margin-top: 7.5rem;
+		margin-bottom: 2rem;
+	}
+	.know{
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	#what-I-know .me{
+		font-size: 2rem;
+	}
+	.works{
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+	.desc{
+		font-size: 3.5rem;
+	}
+	#about-me .me{
+		font-size: 2.7rem;
+	}
+	#contact{
+		margin-top: -2rem;
+	}
+	.itcerts{
+		font-size: 3rem;
+	}
+}
 
