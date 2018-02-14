@@ -1,17 +1,23 @@
 /*webkit is a layout engine for safari and chrome*/
 /*use anti-alias to prevent text fading out during transition*/
-* {
+/** {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}*/
 
 body{
 	height: 100vh;
 	-webkit-overflow-scrolling: touch;
 	/*that is for mobile devices*/
 	/*overflow-y: auto;*/
-	margin-right: 0;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale !important;
+  	-webkit-font-smoothing: antialiased !important;
+  	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
+
 
 #googleMap {
     position: absolute !important;
@@ -648,6 +654,9 @@ footer{
 	#about-me .me{
 		font-size: 2.2rem;
 	}
+	.itcerts{
+		font-size: 3rem;
+	}
 
 }
 
@@ -689,6 +698,9 @@ footer{
 	}
 	.black{
 		font-size: 6rem;
+	}
+	.itcerts{
+		font-size: 3rem;
 	}
 }
 
