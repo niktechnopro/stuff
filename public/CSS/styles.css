@@ -739,3 +739,24 @@ footer{
 	}
 }
 
+
+@media only screen and (min-width: 1600px) and (orientation: landscape){
+	.portfolio-title{
+		font-size: 6rem;
+		font-weight: 400;
+		}
+	.hid{
+		margin-top: 10.5rem;
+		margin-bottom: 5rem;
+	}
+	.works{
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+	#contact{
+		margin-top: -2rem;
+	}
+	.itcerts{
+		font-size: 3rem;
+	}
+}
