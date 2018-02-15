@@ -1,17 +1,14 @@
 /*webkit is a layout engine for safari and chrome*/
 /*use anti-alias to prevent text fading out during transition*/
-/** {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased !important;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+/**{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
 }*/
 
 body{
 	height: 100vh;
 	-webkit-overflow-scrolling: touch;
-	/*that is for mobile devices*/
-	/*overflow-y: auto;*/
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale !important;
   	-webkit-font-smoothing: antialiased !important;
@@ -63,13 +60,16 @@ body{
 }
 
 .socialinks {
+	-webkit-transform-style: preserve-3d;
     list-style: none;
     text-align: center;
-    /*padding: 0;*/
+	
 }
 .social-icons {
     display: inline-block;
     padding: 0px 38px 0px 0px;
+    -webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 .social-icons a{
     display: block;
@@ -91,6 +91,9 @@ body{
 	background-image: url(../images/linkedin.png);
 }
 
+.social{
+	z-index: 1;
+}
 /* .github{
 	background-image: url(../images/github.png);
 	background-size: 50%;
@@ -178,6 +181,11 @@ footer{
 	box-shadow: 0 1em 3em rgba(50,105,206,0.8);
 }
 
+#fixer{
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+}
 
 /*carousel portion*/
 .carousel-wrapper{
@@ -190,6 +198,9 @@ footer{
 }
 
 .carousel {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
 	position: relative;
 	width: 22em;
 	height: 23em;
@@ -502,6 +513,12 @@ footer{
 
 #what-I-know{
 	min-height: 100vh;
+}
+
+.fixer{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
 }
 
 #contact{

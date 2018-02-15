@@ -1,275 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>My Personal Page</title>
-	<meta charset="UTF-8">
-	<!-- meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="title" content="portfolio">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="images/CSISICO.png" type="image/png">
-	<link rel="shortcut icon" href="images/CSISICO.png" type="image/png">
-	<!-- stylesheets -->
-	<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster"> -->
-	<link rel="stylesheet" href="CSS/bootstrap.min.css">
-	<link rel="stylesheet" href="CSS/styles.css" />
-	<!-- jQuery library -->
-	<script src="JS/jquery-3.3.1.min.js"></script>
-	<!-- bootstrap js library -->
-	<script src="JS/bootstrap.min.js"></script>
-	<script src="JS/isotope.pkgd.js"></script>
-<!-- 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-	<script src="JS/sweetalert.min.js"></script>
+    <title>My Personal Page</title>
+    <meta charset="UTF-8">
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="portfolio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/CSISICO.png" type="image/png">
+    <link rel="shortcut icon" href="images/CSISICO.png" type="image/png">
+    <!-- stylesheets -->
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster"> -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- jQuery library -->
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <!-- bootstrap js library -->
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/isotope.pkgd.js"></script>
+    <!-- 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="JS/sweetalert.min.js"></script>
 </head>
+
 <body>
-	<!-- navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top header slide">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<p class="navbar-brand">NIKTECHNOPRO</p>
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        		<span class="icon-bar"></span>
-       			<span class="icon-bar"></span> 
-       			<span class="icon-bar"></span>
-       			<span class="icon-bar"></span>
-      		</button>
-			</div>
-			<div class="collapse navbar-collapse navbar-right collapse-in" id="myNavbar">
-			<ul class="nav navbar-nav text">
-				<li class="nav-item"><a class="scroll" href="#about-me">About Me</a></li>
-				<li class="nav-item"><a class="scroll" href="#what-I-know">Skills</a></li>
-				<li class="nav-item"><a class="scroll" href="#portfolio">My Works</a></li>
-				<li class="nav-item"><a class="scroll" href="#contact">Contact</a></li>
-				<li class="nav-item" data-toggle="modal" data-target="#myModal"><a id="resume">Resume</a></li>
-			</ul>
-			</div>
-		</div>
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog modal-lg">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h4 class="modal-title text-center">My Resume</h4>
-			</div>
-			  <object data="./resume/resume.pdf#view=FitV" type="application/pdf" width="100%" height="850">
-				<p id="resumeerror">
-					It appears your Web browser is not configured to display PDF files. No worries, just <a href="./resume/resume.pdf">click here to download the PDF file.</a>
-				</p>
-			</object>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-default clicker" data-dismiss="modal">Close</button>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	<!-- end of my modal -->
-	<!-- about me area -->
-	<section id="about-me">
-		<div class="container-fluid slide">
-			<h2 class="portfolio-title col-xs-12 hid">About Me</h2>
-			<div class="row">
-			<div class="col-xs-12 col-sm-6 left-me text-center">
-				<p class="black alert alert-info">Hello I am Nikolas</p>
-				<p id="my-title">Full Stack Software Developer</p>
-				<img id="my-picture" src="./images/myself.png" alt="my picture" />
-			</div>
-			<div class="col-xs-12 col-sm-6 right-me text-center">
-				<!-- <p class="black">My Story</p> -->
-				<p class="black alert alert-info">My Story</p>
-				<!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
-				<p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developed an interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
-				<!-- </div>				 -->
-			</div>
-		</div>
-		</div>
-	</section>
-
-	<section id="what-I-know">
-	<div class="container-fluid">
-		<h2 class="portfolio-title know">Skills</h2>
-		<div class="row">
-			<!-- beginning of icons -->
-			<div class="col-xs-12 col-sm-6 logs text-center">
-				<div class="button-group filter buttons">
-            		<button class="btn btn-default me" data-name="*">All</button>
-	            	<button class="btn btn-default me" data-name=".front">Front End</button>
-	            	<button class="btn btn-default me" data-name=".back">Back End</button>
-	            	<button class="btn btn-default me" data-name=".tools">Tools</button>    
-        		</div>
-
-		        <div class="grid">
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="HTML5 - markup language that defines the structure of HTML page"><img class="logo front" src="./logos/html5-logo.png" alt="html5 logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="CSS - tells the browser how to present data, I learn new tricks everytime I use it"><img class="logo" src="./logos/css-logo.png" alt="css logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="JavaScript - object-oriented scripting language"><img class="logo" src="./logos/js-logo.png" alt="js-logo"/></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="jQuery - write less do more"><img class="logo" src="./logos/jquery-logo.png" alt="jQuery logo"/></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Bootstrap - I use this front-end framework for faster and easier web development"><img class="logo" src="./logos/bootstrap-logo.png" alt="bootstrap-logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Syntactically Awesome Stylesheets - simply awesome"><img class="logo" src="./logos/sass-logo.png" alt="sass logo" /></div>
-		            <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="NodeJS+Express - a popular web framework - I use it for my backend needs"><img class="logo" src="./logos/node-express.png" alt="NodeJS+Express logo" /></div>
-		            <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="MySQL - most popular and widely used database"><img class="logo" src="./logos/mysql-logo.png" alt="MySql logo" /></div>
-		            <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="PostgreSQL - the advanced open source database system"><img class="logo" src="./logos/postgresql-logo.png" alt="postgress logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="ReactJS - a declarative, efficient, and flexible JavaScript library for building user interfaces"><img class="logo" src="./logos/reactjs-logo.png" alt="ReacJS logo" /></div>
-		            <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Redux - is a predictable state container for JavaScript apps"><img class="logo" src="./logos/redux-logo.png" alt="Redux logo" /></div>
-		            <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="AWS - is a secure cloud services platform, I chose EC2 instance and then installed NodeJs, Apache2, DB numerous times"><img class="logo" src="./logos/aws-logo.png" alt="aws logo" /></div>
-		            <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Apache - most widely used web server software"><img class="logo" src="./logos/apache.png" alt="apache logo" /></div>
-		            <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="Python -  general-purpose programming language"><img class="logo" src="./logos/python-logo.png" alt="Python logo" /></div>
-		            <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="Ruby was my first step into the world of programming"><img class="logo" src="./logos/ruby-logo.png" alt="Ruby logo" /></div>
-		            <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Git - the most widely used modern version control system, can't imagine my life without it"><img class="logo" src="./logos/git-logo.png" alt="git logo" /></div>
-		            <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="GitHub - a repository hosting service"><img class="logo" src="./logos/github-logo.png" alt="github logo" /></div>
-		            <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Trello - s a collaboration tool that organizes your projects into boards"><img class="logo" src="./logos/trello-logo.png" alt="trello logo" /></div>
-		        </div> <!-- end of grid -->
-			</div><!-- end of icons -->
-				<div class="carousel-wrapper col-xs-12 col-sm-6 text-center">
-				<!-- <div class="row"> -->
-				<div class="carousel" slide-number="1">
-					<!-- first slide -->
-					<div class="carousel-slide">
-						<img class="certs" src="./images/certs/CSIS.png" alt="CSIS logo" />
-						<!-- <object data="./certs/CSIS.pdf"></object> -->
-					</div>
-					<!-- second slide -->
-					<div class="carousel-slide">
-						<img class="certs" src="./images/certs/CCNASEC.png" alt="CCNA Security logo" />
-					</div>
-					<!-- third slide -->
-					<div class="carousel-slide">
-						<img class="certs" src="./images/certs/JNCIA.png" alt="Juniper JNCIA logo" />
-					</div>
-					<!-- forth slide -->
-					<div class="carousel-slide">
-						<img class="certs" id="ccnas" src="./images/certs/CCNA.png" alt="CCNA R&S logo" />
-					</div>
-				</div>
-					<!-- <div class="row"> -->
-						<div>
-						<p class="col-sm-offset-2 col-sm-8 itcerts"><i>
+    <!-- navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top header slide">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-brand">NIKTECHNOPRO</p>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-right collapse-in" id="myNavbar">
+                <ul class="nav navbar-nav text">
+                    <li class="nav-item"><a class="scroll" href="#about-me">About Me</a></li>
+                    <li class="nav-item"><a class="scroll" href="#what-I-know">Skills</a></li>
+                    <li class="nav-item"><a class="scroll" href="#portfolio">My Works</a></li>
+                    <li class="nav-item"><a class="scroll" href="#contact">Contact</a></li>
+                    <li class="nav-item" data-toggle="modal" data-target="#myModal"><a id="resume">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">My Resume</h4>
+                </div>
+                <object data="./resume/resume.pdf#view=FitV" type="application/pdf" width="100%" height="850">
+                    <p id="resumeerror">
+                        It appears your Web browser is not configured to display PDF files. No worries, just <a href="./resume/resume.pdf">click here to download the PDF file.</a>
+                    </p>
+                </object>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default clicker" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of my modal -->
+    <!-- about me area -->
+    <section id="about-me">
+        <div class="container-fluid slide">
+            <h2 class="portfolio-title col-xs-12 hid">About Me</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 left-me text-center">
+                    <p class="black alert alert-info">Hello I am Nikolas</p>
+                    <p id="my-title">Full Stack Software Developer</p>
+                    <img id="my-picture" src="./images/myself.png" alt="my picture" />
+                </div>
+                <div class="col-xs-12 col-sm-6 right-me text-center">
+                    <!-- <p class="black">My Story</p> -->
+                    <p class="black alert alert-info">My Story</p>
+                    <!-- <div class="col-xs-12 col-sm-6 left-me text-center"> -->
+                    <p class="me"><i>Being trained as an electronics technician and spending some time working in the consumer electronics industry I have naturally developed an interest in computers. After completing CompTia training that provided me with PC and OS fundamentals, I transitioned to Networking side with Cisco and Juniper certifications. Configuring devices running Cisco IOS and Junos OS amplified my interest in programming. I took several programming courses on Coursera, edX, Udacity and Udemy to understand the basics and then decided to enroll in an Accelerated School for Software Engineering offered by DigitalCrafts. <p class="me">And here I am...</p></i></p>
+                    <!-- </div>				 -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="what-I-know">
+        <div class="container-fluid">
+            <h2 class="portfolio-title know">Skills</h2>
+            <div class="row">
+                <!-- beginning of icons -->
+                <div class="col-xs-12 col-sm-6 logs text-center">
+                    <div class="button-group filter buttons">
+                        <button class="btn btn-default me" data-name="*">All</button>
+                        <button class="btn btn-default me" data-name=".front">Front End</button>
+                        <button class="btn btn-default me" data-name=".back">Back End</button>
+                        <button class="btn btn-default me" data-name=".tools">Tools</button>
+                    </div><!-- end of button group -->
+                    <div class="grid">
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="HTML5 - markup language that defines the structure of HTML page"><img class="logo front" src="./logos/html5-logo.png" alt="html5 logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="CSS - tells the browser how to present data, I learn new tricks everytime I use it"><img class="logo" src="./logos/css-logo.png" alt="css logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="JavaScript - object-oriented scripting language"><img class="logo" src="./logos/js-logo.png" alt="js-logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="jQuery - write less do more"><img class="logo" src="./logos/jquery-logo.png" alt="jQuery logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Bootstrap - I use this front-end framework for faster and easier web development"><img class="logo" src="./logos/bootstrap-logo.png" alt="bootstrap-logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Syntactically Awesome Stylesheets - simply awesome"><img class="logo" src="./logos/sass-logo.png" alt="sass logo" /></div>
+                        <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="NodeJS+Express - a popular web framework - I use it for my backend needs"><img class="logo" src="./logos/node-express.png" alt="NodeJS+Express logo" /></div>
+                        <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="MySQL - most popular and widely used database"><img class="logo" src="./logos/mysql-logo.png" alt="MySql logo" /></div>
+                        <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="PostgreSQL - the advanced open source database system"><img class="logo" src="./logos/postgresql-logo.png" alt="postgress logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="ReactJS - a declarative, efficient, and flexible JavaScript library for building user interfaces"><img class="logo" src="./logos/reactjs-logo.png" alt="ReacJS logo" /></div>
+                        <div class="grid-item front" data-toggle="tooltip" data-placement="top" title="Redux - is a predictable state container for JavaScript apps"><img class="logo" src="./logos/redux-logo.png" alt="Redux logo" /></div>
+                        <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="AWS - is a secure cloud services platform, I chose EC2 instance and then installed NodeJs, Apache2, DB numerous times"><img class="logo" src="./logos/aws-logo.png" alt="aws logo" /></div>
+                        <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Apache - most widely used web server software"><img class="logo" src="./logos/apache.png" alt="apache logo" /></div>
+                        <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="Python -  general-purpose programming language"><img class="logo" src="./logos/python-logo.png" alt="Python logo" /></div>
+                        <div class="grid-item back" data-toggle="tooltip" data-placement="top" title="Ruby was my first step into the world of programming"><img class="logo" src="./logos/ruby-logo.png" alt="Ruby logo" /></div>
+                        <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Git - the most widely used modern version control system, can't imagine my life without it"><img class="logo" src="./logos/git-logo.png" alt="git logo" /></div>
+                        <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="GitHub - a repository hosting service"><img class="logo" src="./logos/github-logo.png" alt="github logo" /></div>
+                        <div class="grid-item tools" data-toggle="tooltip" data-placement="top" title="Trello - s a collaboration tool that organizes your projects into boards"><img class="logo" src="./logos/trello-logo.png" alt="trello logo" /></div>
+                    </div><!-- end of grid -->
+                </div><!-- end of beginning of icons -->
+                <div class="carousel-wrapper col-xs-12 col-sm-6 text-center">
+                    <!-- <div class="row"> -->
+                    <div class="carousel" slide-number="1">
+                        <!-- first slide -->
+                        <div class="carousel-slide">
+                            <img class="certs" src="./images/certs/CSIS.png" alt="CSIS logo" />
+                            <!-- <object data="./certs/CSIS.pdf"></object> -->
+                        </div>
+                        <!-- second slide -->
+                        <div class="carousel-slide">
+                            <img class="certs" src="./images/certs/CCNASEC.png" alt="CCNA Security logo" />
+                        </div>
+                        <!-- third slide -->
+                        <div class="carousel-slide">
+                            <img class="certs" src="./images/certs/JNCIA.png" alt="Juniper JNCIA logo" />
+                        </div>
+                        <!-- forth slide -->
+                        <div class="carousel-slide">
+                            <img class="certs" id="ccnas" src="./images/certs/CCNA.png" alt="CCNA R&S logo" />
+                        </div>
+                    </div>
+                    <div>
+                        <p class="col-sm-offset-2 col-sm-8 itcerts fixer"><i>
 							 I hold multiple IT certifications with Cisco, CompTIA, Juniper and have a desire to put these to use as well. 
-						</i></p></div>
-					<!-- </div> -->
-				<!-- <div class="row buttons">
-					<div class="prev col-xs-offset-2 col-sm-offset-3 col-xs-2 col-sm-2"><img src="./images/left.png" /></div>
-					<div class="next col-xs-offset-3 col-sm-offset-2 col-xs-2 col-sm-2"><img src="./images/right.png" 	/></div>
-				</div> -->
-			</div> <!--end of carousel wrapper -->
-		</div><!-- end of row -->
-	</div><!-- end of container fluid -->
-	</section><!-- end of section what I know -->
-
-	<!-- my portfolio area -->
-	<section id="portfolio">
-		<div class="container-fluid text-center">
-			<h2 class="portfolio-title works">My Works</h2>
-				<!-- first work -->
-				<div class="row port cs-style-3">
-				<div class="col-md-4 col-sm-6 col-xs-12 item-space">
-					<figure>
-						<img class="presentation" src="./images/focus.png" alt="Focus screenshot">	
-						<!-- <video autoplay loop>
+						</i></p>
+                    </div>
+                </div><!-- end of carousel wrapper -->
+            </div><!-- end of row -->
+        </div><!-- end of container fluid -->
+    </section>
+    <!-- end of section what I know -->
+    <!-- my portfolio area -->
+    <section id="portfolio">
+        <div class="container-fluid text-center">
+            <h2 class="portfolio-title works fixer">My Works</h2>
+            <!-- first work -->
+            <div class="row port cs-style-3 fixer">
+                <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+                    <figure>
+                        <img class="presentation" src="./images/focus.png" alt="Focus screenshot">
+                        <!-- <video autoplay loop>
 	  						<source src="./demo/focus.mp4" type="video/mp4">
 	  						Your browser does not support video tag
 						</video> -->
-						<figcaption class="text-left">
-					        <h3>Focus!</h3>
-					        <span>Front End Project</span>
-					        <a href="https://github.com/niktechnopro/Focus" class="button" >GitHub</a>
-					    </figcaption>
-					</figure>
-						<p class="desc"><i>
+                        <figcaption class="text-left fixer">
+                            <h3>Focus!</h3>
+                            <span class="fixer">Front End Project</span>
+                            <a rel="nofolow" target="_blank" href="https://github.com/niktechnopro/Focus" class="button">GitHub</a>
+                        </figcaption>
+                    </figure>
+                    <p class="desc fixer"><i>
 							 A timer, based on pomodoro time management technique with entertainment
 						</i></p>
-				</div>
-				<!-- my second work -->
-				<div class="col-md-4 col-sm-6 col-xs-12 item-space">
+                </div>
+                <!-- my second work -->
+                <div class="col-md-4 col-sm-6 col-xs-12 item-space">
                     <figure>
                         <img src="./images/village.png" alt="Village scresnshot">
                         <figcaption>
                             <h3>Village</h3>
-                            <span>Hackaton against violence Project</span>
-                            <a href="https://github.com/niktechnopro/Village" class="button" >GitHub</a>
-						</figcaption>
-					</figure>
-					<p class="desc"><i>
+                            <span class="fixer">Hackaton against violence Project</span>
+                            <a rel="nofolow" target="_blank" href="https://github.com/niktechnopro/Village" class="button">GitHub</a>
+                        </figcaption>
+                    </figure>
+                    <p class="desc fixer"><i>
 							 Village - webapp that builds emotional intelligence in adolescent boys
 						</i></p>
                 </div>
-				<!-- my third work -->
-				<div class="col-md-4 col-sm-6 col-xs-12 item-space">
+                <!-- my third work -->
+                <div class="col-md-4 col-sm-6 col-xs-12 item-space">
                     <figure>
                         <img src="./images/locdocscreenshot.png" alt="Loc Doc Screenshot">
                         <figcaption>
                             <h3>LocDoc</h3>
-                            <span>React Redux NodeJS<p>Geolocation API and Doctor API Project</p></span>
-                            <a href="https://github.com/niktechnopro/LocDoc" class="button" >GitHub</a>
-						</figcaption>
-					</figure>
-					<p class="desc"><i>
+                            <span class="fixer">React Redux NodeJS<p>Geolocation API and Doctor API Project</p></span>
+                            <a rel="nofolow" target="_blank" href="https://github.com/niktechnopro/LocDoc" class="button">GitHub</a>
+                        </figcaption>
+                    </figure>
+                    <p class="desc fixer"><i>
 							 LocDoc is a powerful tool that enables a user to find a local doctor
 						</i></p>
                 </div>
-			</div>
-		</div>
-	</section>
-	<!-- end of my works -->
-	
-	<!-- Contact Areaclass="mapWrap" -->
-	<section id="contact">
-	<div id="googleMap"></div>
-	<div id="contact-wrapper">
-		<h2 class="portfolio-title contact">Contact Me!</h2>
-		<div class="row cont">
-			<div class="left-side col-sm-6 text-center social">
-				<div id="social">
-					<p class="normal-txt text-center">Find me on</p>
-					<ul class="socialinks">
-                        <li class="social-icons"><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/niktechnopro"></a></li>
-                        <li class="social-icons"><a target="_blank" class="github" href="https://github.com/niktechnopro"></a></li>
-                        <!-- <li class="social-icons"><a class="github" href="#"></a></li> -->
-                    </ul>
-				</div>
-			</div>
-			<div class="right-side col-sm-6 text-center social">
-				<p class="normal-txt">Direct Contact</p>
-				<form formReset class="form-group text-center">
-					<div class="col-sm-offset-2 col-sm-8">
-					<div class="contact">
-						<input type="text" name="name" class="form-control" placeholder="Your name" />
-					</div>
-					<div class="contact">
-						<input type="email" name="email" class="form-control" placeholder="Your email" />
-					</div>
-					<div class="contact">
-						<textarea type="text" class="form-control" name="textarea" placeholder="How can I help?"></textarea>
-					</div>
-					<div>
-						<div class="col-sm-12 text-center">
-						<button submitButton type="submit" class="col-sm-4 col-sm-offset-4  btn btn-success">Send!</button>
-						</div>
-					</div>
-					</div>
-				</form>
-			</div>
-			<div class="text-center"><span class="backtotop scroll" href="#about-me">back to top</span></div>
-		</div>
-	</div>
-	</section>
-	<!-- Contact Area End -->
-
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="left-side col-sm-12 text-center">
-					<copyright id="copyright">&copy Copyright 2018 <a href="/">www.niktechnopro.com</a></copyright>	
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer end -->
-	<script src="./JS/carousel.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3lePloLKVu1xjO-wCQyVYm3xMx4tP_Eg">
-	</script>
-	<script src="./JS/googleMap.js"></script>
-	<script src="./JS/pagescroll.js"></script>
-	</body>
+            </div>
+        </div>
+    </section>
+    <!-- end of my works -->
+    <!-- Contact Areaclass="mapWrap" -->
+    <section id="contact">
+        <div id="googleMap"></div>
+        <div id="contact-wrapper">
+            <h2 class="portfolio-title contact fixer">Contact Me!</h2>
+            <div class="row cont fixer">
+                <div class="left-side col-sm-6 text-center social">
+                    <div id="social">
+                        <p class="normal-txt text-center">Find me on</p>
+                        <ul class="socialinks">
+                            <li class="social-icons"><a rel="nofolow" target="_blank" class="linkedin" href="https://www.linkedin.com/in/niktechnopro"></a></li>
+                            <li class="social-icons"><a rel="nofolow" target="_blank" class="github" href="https://github.com/niktechnopro"></a></li>
+                            <!-- <li class="social-icons"><a class="github" href="#"></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-side col-sm-6 text-center social">
+                    <p class="normal-txt">Direct Contact</p>
+                    <form formReset class="form-group text-center">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="contact">
+                                <input type="text" name="name" class="form-control" placeholder="Your name" />
+                            </div>
+                            <div class="contact">
+                                <input type="email" name="email" class="form-control" placeholder="Your email" />
+                            </div>
+                            <div class="contact">
+                                <textarea type="text" class="form-control" name="textarea" placeholder="How can I help?"></textarea>
+                            </div>
+                            <div>
+                                <div class="col-sm-12 text-center">
+                                    <button submitButton type="submit" class="col-sm-4 col-sm-offset-4  btn btn-success">Send!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center"><span class="backtotop scroll" href="#about-me">back to top</span></div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Area End -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="left-side col-sm-12 text-center">
+                    <copyright id="copyright">&copy Copyright 2018 <a href="/">www.niktechnopro.com</a></copyright>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="./JS/carousel.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3lePloLKVu1xjO-wCQyVYm3xMx4tP_Eg">
+    </script>
+    <script src="./JS/googleMap.js"></script>
+    <script src="./JS/pagescroll.js"></script>
+</body>
 
 </html>
