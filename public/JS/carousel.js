@@ -9,7 +9,7 @@ function autoSpin(){
 	// console.log(currentSlide);
 }
 
-const timer = setInterval(autoSpin, 2000);
+const timer = setInterval(autoSpin, 3000);
 
 
 
