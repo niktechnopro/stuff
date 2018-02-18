@@ -214,6 +214,7 @@ footer{
 	-webkit-transition: transform 0.8s ease;
 	-moz-transition: transform 0.8s ease;
 	-ms-transition: transform 0.8s ease;
+	transition: transform 0.8s ease;
 }
 
 .carousel-slide{
@@ -229,36 +230,42 @@ footer{
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
 }
 
 [slide-number="2"] { 
 	-webkit-transform: rotateY(90deg);
 	-moz-transform: rotateY(90deg);
 	-ms-transform: rotateY(90deg);
+	transform: rotateY(90deg);
 }
 
 [slide-number="3"] { 
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 [slide-number="4"] { 
 	-webkit-transform: rotateY(270deg);
 	-moz-transform: -moz-rotateY(270deg);
 	-ms-transform: rotateY(270deg);
+	transform: rotateY(270deg);
 }
 
 .carousel-slide:nth-child(3) {
-  	-webkit-transform: translateZ(-10.7em) rotateY(180deg);
+  	-webkit-transform: translateZ(-10.5em) rotateY(180deg);
   	-moz-transform: translateZ(-10.5em) -moz-rotateY(180deg);
   	-ms-transform: translateZ(-10.5em) rotateY(180deg);
+  	transform: translateZ(-10.5em) rotateY(180deg);
 }
 
 .carousel-slide:nth-child(2) {
   	-webkit-transform: rotateY(-270deg) translateX(10.8em);
   	-moz-transform: rotateY(-270deg) -moz-translateX(10.8em);
   	-ms-transform: rotateY(-270deg) translateX(10.8em);
+  	transform: rotateY(-270deg) translateX(10.8em);
   	transform-origin: top right;
 }
 
@@ -266,6 +273,7 @@ footer{
   	-webkit-transform: rotateY(270deg) translateX(-10.7em);
   	-moz-transform: rotateY(-270deg) -moz-translateX(-10.7em);
   	-ms-transform: rotateY(-270deg) translateX(-10.7em);
+  	transform: rotateY(270deg) translateX(-10.7em);
   	transform-origin: center left;
 }
 
@@ -273,6 +281,7 @@ footer{
 	-webkit-transform: translateZ(11em);
 	-moz-transform: translateZ(11em);
 	-ms-transform: translatez(11em);
+	transform: translatez(11em);
 }
 
 .certs{
@@ -418,6 +427,40 @@ footer{
 	margin-top: 10em;
 }
 
+/*for smooth slide*/
+.slideanim {visibility:hidden;}
+.slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 0.9s;
+      animation-delay: 10ms;
+      -webkit-animation-duration: 0.9s;
+      -webkit-animation-delay: 10ms;
+      visibility: visible;
+  }
+
+  /*have to use pixels on keyframes, because % make it choppy*/
+  @keyframes slide {
+    from {
+      /*opacity: 0;*/
+      transform: translateY(-1000px);
+    } 
+    to {
+      /*opacity: 1;*/
+      transform: translateY(0px);
+    }
+  }
+  @-webkit-keyframes slide {
+    from {
+      /*opacity: 0;*/
+      -webkit-transform: translateY(-1000px);
+    } 
+    to {
+      /*opacity: 1;*/
+      -webkit-transform: translateY(0px);
+    }
+  }
+
 .me{
 	color: black;
 	font-size: 1.5em;
@@ -470,40 +513,6 @@ footer{
 .nav li:hover a{
 	color: black !important;
 }
-
-/*for smooth slide*/
-.slideanim {visibility:hidden;}
-.slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 0.9s;
-      animation-delay: 10ms;
-      -webkit-animation-duration: 0.9s;
-      -webkit-animation-delay: 10ms;
-      visibility: visible;
-  }
-
-  /*have to use pixels on keyframes, because % make it choppy*/
-  @keyframes slide {
-    from {
-      /*opacity: 0;*/
-      transform: translateY(-1000px);
-    } 
-    to {
-      /*opacity: 1;*/
-      transform: translateY(0px);
-    }
-  }
-  @-webkit-keyframes slide {
-    from {
-      /*opacity: 0;*/
-      -webkit-transform: translateY(-1000px);
-    } 
-    to {
-      /*opacity: 1;*/
-      -webkit-transform: translateY(0px);
-    }
-  }
 
   /*accounting for first section/navbar*/
 #about-me{
