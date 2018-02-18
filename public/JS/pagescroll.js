@@ -8,9 +8,9 @@ var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }
-$(window).on('beforeunload', function(){
-  $(window).scrollTop(-1000); //to reposition page to top on reload
-});
+// $(window).on('beforeunload', function(){
+//   $(window).scrollTop(-1000); //to reposition page to top on reload
+// });
 
 $(document).ready(function(){
     //section for isotope
