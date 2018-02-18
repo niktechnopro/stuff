@@ -5,6 +5,8 @@ var $form = $('[formReset]')[0];//referencing my table here
 // As per the HTML5 Specification
 // var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]){2,}$/;
 var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+$container = $('.grid');
+
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }
@@ -12,20 +14,39 @@ var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 //   $(window).scrollTop(-1000); //to reposition page to top on reload
 // });
 
+
 $(document).ready(function(){
+    // first we need to make sure that all images loaded
     //section for isotope
-    var $grid = $('.grid').isotope({ // initialization
-    itemSelector: '.grid-item',
-    layoutMode: 'fitRows'
-    });
-    //reading from buttons based on attribute
-    $('.filter button').click(function(){
-      let value = $(this).attr('data-name')
-      // console.log(value)
-      $grid.isotope({ //filtering what's showing based on value
-        filter: value
-      })
-    })
+        var $grid = $container.isotope({ // initialization
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+        });
+        //reading from buttons based on attribute
+        $('.filter button').click(function(){
+            let value = $(this).attr('data-name')
+            // console.log(value)
+            $grid.isotope({ //filtering what's showing based on value
+            filter: value
+          })
+        })
+    
+    // jQuery( function() {
+    //     // now doc is ready, make selection
+    //     // use another selector, not .isotope,
+    //     // since that is dynamically added in Isotope v1
+    //     var $container = jQuery('#container');
+    //     // use imagesLoaded, instead of window.load
+    //     $container.imagesLoaded( function() {
+    //         $container.isotope({
+    //             itemSelector: '.grid-item',
+    //             // masonry is default layoutMode, no need to specify it
+    //             sortBy: 'random'
+    //         });
+    //     })
+    // });
+
+
     //end of section for isotope
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
