@@ -6,7 +6,6 @@ var $form = $('[formReset]')[0];//referencing my table here
 // var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]){2,}$/;
 var emailRegExp = /^[a-zA-Z0-9._#!&%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 $container = $('.grid');
-
 // window.onunload = function () {
 //     window.scrollTo(0, 0);
 // }
@@ -19,8 +18,8 @@ $(document).ready(function(){
     // first we need to make sure that all images loaded
     //section for isotope
     $container.imagesLoaded( function() {
-        console.log('logos have loaded')
-        var $grid = $container.isotope({ //isotop initialization
+        console.log('isotop logos have loaded')
+        const $grid = $container.isotope({ //isotop initialization
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
         });
