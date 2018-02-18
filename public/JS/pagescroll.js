@@ -18,9 +18,11 @@ $container = $('.grid');
 $(document).ready(function(){
     // first we need to make sure that all images loaded
     //section for isotope
-        var $grid = $container.isotope({ // initialization
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows'
+    $container.imagesLoaded( function() {
+        console.log('logos have loaded')
+        var $grid = $container.isotope({ //isotop initialization
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
         });
         //reading from buttons based on attribute
         $('.filter button').click(function(){
@@ -30,23 +32,10 @@ $(document).ready(function(){
             filter: value
           })
         })
+    });
     
-    // jQuery( function() {
-    //     // now doc is ready, make selection
-    //     // use another selector, not .isotope,
-    //     // since that is dynamically added in Isotope v1
-    //     var $container = jQuery('#container');
-    //     // use imagesLoaded, instead of window.load
-    //     $container.imagesLoaded( function() {
-    //         $container.isotope({
-    //             itemSelector: '.grid-item',
-    //             // masonry is default layoutMode, no need to specify it
-    //             sortBy: 'random'
-    //         });
-    //     })
-    // });
-
-
+    
+    
     //end of section for isotope
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
