@@ -28,7 +28,7 @@ body{
 	background-color: rgba(0, 0, 0, 0.75) !important;
     padding: 5rem 0 5rem 0;
     position: relative;
-    z-index: 1;
+    /*z-index: 1;*/
     /*this 100vh covers whole map*/
     min-height: 100vh;
     margin-top: -1.2em;
@@ -91,9 +91,9 @@ body{
 	background-image: url(../images/linkedin.png);
 }
 
-.social{
+/*.social{
 	z-index: 1;
-}
+}*/
 /* .github{
 	background-image: url(../images/github.png);
 	background-size: 50%;
@@ -163,7 +163,7 @@ footer{
 
 .logos{
 	padding-top: 20px;
-	z-index: 20;
+	/*z-index: 20;*/
 }
 
 #my-picture{
@@ -540,6 +540,10 @@ footer{
     border-bottom: 1px solid;
     text-decoration: none;
 }
+
+a[hover] { 
+	cursor: pointer 
+	}
 
 
 .backtotop:hover {
