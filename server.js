@@ -69,7 +69,7 @@ app.use((req, res, next) => { //logging info about date, location and method use
 app.get('/defaultsite', (req, res) => {
     console.log('someone came to our page')
     // res.sendFile('index.html');
-    res.sendFile(__dirname + '/Public/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 
