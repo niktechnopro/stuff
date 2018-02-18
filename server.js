@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
 
 //the following is to get chatBot transcript
 app.post('/send',(req, res)=>{
-    // console.log('message came to our send route: ', req.body)
+    console.log('message came to our send route: ', req.body)
     let message = req.body;
     let myJSON = JSON.stringify(message)
     let mailOptions={//email options
