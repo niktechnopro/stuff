@@ -51,7 +51,7 @@ body{
 	padding: 5px;
 	/* border-bottom: 1px solid; */
 	margin: 1rem auto 0 auto;
-	font-size: 3em;
+	font-size: 3rem;
 }
 
 .title{
@@ -185,6 +185,7 @@ footer{
 	/*box-shadow: 0 1em 3em rgba(50,105,206,0.8);*/
 	transform: scale(1.2)
 }
+
 
 #fixer{
 	width: 400px;
@@ -576,9 +577,14 @@ a[hover] {
 	font-size: 2rem;
 }
 
-.grid-item { width: 25%; }
+.grid-item { 
+	width: 25%;	
+}
 
-/*.grid-item--width2 { width: 50%; }*/
+span [title]{
+	/*content: attr(title);*/
+	font-size: 45px !important;
+}
 
 #resume{
 	cursor: pointer;
@@ -637,6 +643,10 @@ a[hover] {
 	}
 	.works{
 		margin-bottom: 1rem;
+	}
+	.black{
+		font-size: 4rem;
+		font-weight: 400;
 	}
 }
 
