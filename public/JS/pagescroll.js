@@ -33,11 +33,20 @@ $(document).ready(function(){
         })
     });
     
-    
-    
     //end of section for isotope
     // this portion is only for tooltip
     $('[data-toggle="tooltip"]').tooltip({delay: {show: 400, hide: 100}});  
+    //this portion for carousel
+    function autoSpin(){
+    var currentSlide = 0;
+    var current = $(".carousel").attr("slide-number")
+    currentSlide = parseInt(current);
+    (currentSlide === 4) ? currentSlide=1 : currentSlide += 1;
+    $(".carousel").attr("slide-number", `${currentSlide}`);
+    }
+
+    const timer = setInterval(autoSpin, 3000);
+    //end of carousel
     // this portion is for smooth scrolling
     // calculating the header style
     var headerHeight = $('.header').outerHeight();
