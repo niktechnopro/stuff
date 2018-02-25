@@ -27,7 +27,7 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 var marker = new google.maps.Marker({
         position: LatLng,
         map: map,
-        title: 'I am here!',
+        // title: 'I am here!',
         icon: image
       });
 
