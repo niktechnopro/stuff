@@ -610,6 +610,10 @@ span [title]{
 		font-size: 2.2rem;
 	}
 
+.swal-footer{
+	text-align: center;
+}
+
 
 @media only screen and (min-width: 450px){
 	.portfolio-title{
