@@ -95,15 +95,6 @@ body{
 	background-image: url(../images/linkedin.png);
 }
 
-/*.social{
-	z-index: 1;
-}*/
-/* .github{
-	background-image: url(../images/github.png);
-	background-size: 50%;
-	background-position: 0px 3px;
-} */
-/*form styling*/
 .form-control {
     box-shadow: none;
     border: 3px solid #8E8E8E;
@@ -183,13 +174,16 @@ footer{
 	margin-top: 3rem;
 }
 
+.mysql{
+	margin-left: 1rem;
+}
+
 .sass{
 	margin-top: 2rem;
 }
 
 .logos{
 	padding-top: 20px;
-	/*z-index: 20;*/
 }
 
 #my-picture{
