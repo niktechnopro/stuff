@@ -159,12 +159,32 @@ footer{
 /*//what I know portion*/
 .logo{
 	margin-top: 1rem;
-	width: 80px;
+	width: 8rem;
 	box-shadow: 0px 0px 0px rgba(0,0,0,0.15);
   	/*transition: box-shadow 0.2s ease-in-out;*/
   	border-radius: 3px;
   	transform: scale(1);
   	transition: 0.3s all ease-in-out;
+}
+
+.jquery{
+	width: 12rem;
+}
+
+.git-hub{
+	width: 10rem;
+}
+
+.git{
+	width: 9rem;
+}
+
+.aws{
+	margin-top: 3rem;
+}
+
+.sass{
+	margin-top: 2rem;
 }
 
 .logos{
@@ -200,9 +220,6 @@ footer{
 
 /*carousel portion*/
 .carousel-wrapper{
-	/*display: block;*/
-	/*max-width: 36%;*/
-	/* margin: -5% auto -5% auto; */
 	perspective:270em;
 	text-align: center;
 	margin-top: 5em;
