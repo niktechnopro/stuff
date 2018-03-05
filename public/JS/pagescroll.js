@@ -125,7 +125,7 @@ $(document).ready(function(){
                     method: "POST",
                     data: data,
                     dataType: "JSON"    
-                }).done(result => {
+                }).then(result => {
                     // console.log("this is done message ", result)
                     if (result.message == 'success'){
                         swal({
@@ -145,7 +145,7 @@ $(document).ready(function(){
                         })
                     }
                 })
-                .fail(error=>{
+                .catch(error=>{
                     console.log('error ocured: ', error)
                 })
             }
