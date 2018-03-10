@@ -18,11 +18,13 @@ app.use(express.urlencoded({extended: false})); //what is urlencoded
 //creating static path from the root of our harddrive to public folder
 app.use(express.static(__dirname + '/public'));
 //the following allows not to use default rendering engine
+
 // app.use(function(req, res, next){
 //     res.header('Access-Control-Allow-Origin', "*");
 //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 //     next();
 // })
+
 // creating a server
 var server = http.createServer(app);
 // setup database
@@ -66,7 +68,7 @@ app.use((req, res, next) => { //logging info about date, location and method use
 });
 
 // the following to serve welcome page
-app.get('/defaultsite', (req, res) => {
+app.get('/', (req, res) => {
     console.log('someone came to our page')
     // res.sendFile('index.html');
     res.sendFile(__dirname + '/public/index.html');
