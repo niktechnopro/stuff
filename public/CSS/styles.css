@@ -10,6 +10,7 @@ body{
 	height: 100vh;
 	-webkit-overflow-scrolling: touch;
 	margin: 0;
+	padding: 0;
 	-moz-osx-font-smoothing: grayscale !important;
   	-webkit-font-smoothing: antialiased !important;
   	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -487,6 +488,10 @@ footer{
 	font-family: Lobster, Sans-Serif;
 }
 
+.right-me .me{
+	padding: 0.8rem;
+}
+
 .desc{
 	color: black;
 	font-size: 1.5em;
@@ -563,7 +568,7 @@ footer{
 .backtotop{
 	color: #fff;
     font-size: 3em;
-    font-weight: 100;
+    font-weight: 300;
     padding-bottom: 10px;
     border-bottom: 1px solid;
     text-decoration: none;
