@@ -1,2 +1,3 @@
-# stuff
-this is my portfolio page
+#stuff
+this serves as my portfolio page
+
