@@ -17,7 +17,6 @@ app.use(express.urlencoded({extended: false})); //what is urlencoded
 
 //creating static path from the root of our harddrive to public folder
 app.use(express.static(__dirname + '/public'));
-//the following allows not to use default rendering engine
 
 // app.use(function(req, res, next){
 //     res.header('Access-Control-Allow-Origin', "*");

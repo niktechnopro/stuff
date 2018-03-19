@@ -48,7 +48,7 @@ $(document).ready(function(){
     const timer = setInterval(autoSpin, 3000);
     //end of carousel
     // this portion is for smooth scrolling
-    // calculating the header style
+    // calculating the header height
     var headerHeight = $('.header').outerHeight();
     // console.log('Header height', headerHeight)
     var scrollLink = $('.scroll');
